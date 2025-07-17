@@ -1,37 +1,28 @@
 $env.config.show_banner = false
 $env.EDITOR = "nvim"
 
-# TODO: Fix install_package issues where it can't behave correctly as expected
-
-def install_package [source: string, repo?: string, ...packages: string] {
-  let my_packages = if ($packages | describe) == "string" {
-    [$packages]
-  } else {
-    $packages
-  }
-  for $package in $my_packages {
-    match $source {
-      "arch" => {
-        match $repo {
-          "c" => { aura -S extra/($package) },
-          "ct" => { aura -S core-testing/($package) },
-          "e" => { aura -S extra/($package) },
-          "et" => { aura -S extra/($package) },
-          "m" => { aura -S multilib/($package) },
-          "mt" => { aura -S multilib-testing/($package) },
-          "caur" => { aura -S chaotic-aur/($package) },
-          _ => { aura -S $package }
-        }
-      },
-      "aur" => { aura -A aur/($package) },
-      "snap" => { sudo snap install ...$package },
-      "fhub" => { flatpak install ...$package },
-      _ => { echo "Unknown source" }
-    }
+def install_package [source: string, package: string, repo?: string] {
+  match $source {
+    "arch" => {
+      match $repo {
+        "c" => { aura -S extra/($package) },
+        "ct" => { aura -S core-testing/($package) },
+        "e" => { aura -S extra/($package) },
+        "et" => { aura -S extra/($package) },
+        "m" => { aura -S multilib/($package) },
+        "mt" => { aura -S multilib-testing/($package) },
+        "caur" => { aura -S chaotic-aur/($package) },
+        _ => { aura -S $package }
+      }
+    },
+    "aur" => { aura -A aur/($package) },
+    "snap" => { sudo snap install $package },
+    "fhub" => { flatpak install $package },
+    _ => { echo "Unknown source" }
   }
 }
 
-def search_package [package: string, source: string] {
+def search_package [source: string, package: string] {
   match $source {
     "arch" => { aura -Ss $package },
     "aur" => { aura -As $package },
@@ -41,7 +32,16 @@ def search_package [package: string, source: string] {
   }
 }
 
-def update_system [option?: string] {
+def uninstall_package [source: string, package: string] {
+  match $source {
+    "sys" => { sudo pacman -Rns $package },
+    "snap" => { sudo snap remove $package },
+    "fhub" => { flatpak uninstall $package },
+    _ => { echo "Unknown" }
+  }
+}
+
+def update_package [option?: string] {
   match $option {
     "arch" => { aura -Syu },
     "aur" => { aura -Ayu },
@@ -56,21 +56,28 @@ def update_system [option?: string] {
   }
 }
 
-def nm [action: string, ssid?: string] {
-  match $action {
-    "c" => { nmcli device wifi connect $ssid --ask },
-    "l" => { nmcli device wifi list }
-    _ => { nmcli device wifi connect $ssid --ask }
+def nmc [ssid: string] {
+  if ($ssid | is-empty) == 0 {
+    echo "SSID can't be empty."
+    return
+  } else {
+    nmcli device wifi connect $ssid --ask
   }
+}
+
+def nml [] {
+  nmcli device wifi list
 }
 
 alias c = clear
 alias d = rm -rf
-alias x = exit
+alias g = grep --color
 alias i = install_package
 alias l = ls -la
+alias r = uninstall_package
 alias s = search_package
-alias u = update_system
-alias grep = grep --color
+alias u = update_package
+alias x = exit
+alias nuc = ^$env.EDITOR $nu.config-path
 
 source ~/.zoxide.nu
