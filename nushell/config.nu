@@ -1,29 +1,31 @@
 $env.config.show_banner = false
 $env.EDITOR = "nvim"
 
-def install_package [source: string, repo?: string, ...my_packages: string] {
-  let packages = if ($my_packages | describe) == "string" {
-    $my_packages
+# TODO: Fix install_package issues where it can't behave correctly as expected
+
+def install_package [source: string, repo?: string, ...packages: string] {
+  let my_packages = if ($packages | describe) == "string" {
+    [$packages]
   } else {
-    [$my_packages]
+    $packages
   }
-  for $package in $packages { 
+  for $package in $my_packages {
     match $source {
       "arch" => {
         match $repo {
-          "c" => { aura -S extra/$package },
-          "ct" => { aura -S core-testing/$package },
-          "e" => { aura -S extra/$package },
-          "et" => { aura -S extra/$package },
-          "m" => { aura -S multilib/$package },
-          "mt" => { aura -S multilib-testing/$package },
-          "caur" => { aura -S chaotic-aur/$package },
+          "c" => { aura -S extra/($package) },
+          "ct" => { aura -S core-testing/($package) },
+          "e" => { aura -S extra/($package) },
+          "et" => { aura -S extra/($package) },
+          "m" => { aura -S multilib/($package) },
+          "mt" => { aura -S multilib-testing/($package) },
+          "caur" => { aura -S chaotic-aur/($package) },
           _ => { aura -S $package }
         }
       },
-      "aur" => { aura -A aur/$package },
-      "snap" => { sudo snap install $package },
-      "fhub" => { flatpak install $package },
+      "aur" => { aura -A aur/($package) },
+      "snap" => { sudo snap install ...$package },
+      "fhub" => { flatpak install ...$package },
       _ => { echo "Unknown source" }
     }
   }
