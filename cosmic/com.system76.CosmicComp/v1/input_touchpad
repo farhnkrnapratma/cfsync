@@ -1,0 +1,14 @@
+(
+    state: Enabled,
+    acceleration: Some((
+        profile: None,
+        speed: 0.03853627492575307,
+    )),
+    click_method: Some(ButtonAreas),
+    tap_config: Some((
+        enabled: true,
+        button_map: Some(LeftRightMiddle),
+        drag: true,
+        drag_lock: false,
+    )),
+)
