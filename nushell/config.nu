@@ -2,9 +2,13 @@ $env.config.show_banner = false
 $env.EDITOR = "nvim"
 
 def update_system [] {
+  echo "updating :: system"
   aura -Syu
+  echo "updating :: aur"
   aura -Ayu
+  echo "updating :: snap"
   sudo snap refresh
+  echo "updating :: flatpak"
   flatpak update
 }
 
