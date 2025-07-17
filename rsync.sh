@@ -2,10 +2,10 @@
 
 cfg="$HOME/.config"
 
-rsync -av $cfg/aura/ ./aura/
-rsync -av $cfg/wezterm/ ./wezterm/
-rsync -av $cfg/nvim/ ./nvim/
-rsync -av $cfg/nushell/ ./nushell/
-rsync -av $cfg/cosmic/ ./cosmic/
-rsync -av $cfg/BetterDiscord/ ./BetterDiscord/
-rsync -av $cfg/starship.toml ./starship.toml
+rsync -av --delete $cfg/aura/ ./aura/
+rsync -av --delete $cfg/wezterm/ ./wezterm/
+rsync -av --delete $cfg/nvim/ ./nvim/
+rsync -av --delete $cfg/nushell/ ./nushell/
+rsync -av --delete $cfg/cosmic/ ./cosmic/
+rsync -av --delete $cfg/BetterDiscord/ ./BetterDiscord/
+rsync -av --delete $cfg/starship.toml ./starship.toml
