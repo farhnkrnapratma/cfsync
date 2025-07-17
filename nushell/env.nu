@@ -1,3 +1,4 @@
+$env.CFG = $env.HOME + "/.config"
 $env.STARSHIP_SHELL = "nu"
 
 def left_prompt [] {

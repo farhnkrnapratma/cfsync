@@ -57,7 +57,7 @@ def update_package [option?: string] {
 }
 
 def nmc [ssid: string] {
-  if ($ssid | is-empty) == 0 {
+  if ($ssid | is-empty) {
     echo "SSID can't be empty."
     return
   } else {
@@ -71,6 +71,7 @@ def nml [] {
 
 alias c = clear
 alias d = rm -rf
+alias e = ^$env.EDITOR
 alias g = grep --color
 alias i = install_package
 alias l = ls -la
