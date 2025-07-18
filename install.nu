@@ -1,7 +1,5 @@
 #!/bin/nu
 
-# TODO: Work on this script until it's done.
-
 let src = ["aura/" "wezterm/" "nvim/" "nushell" "cosmic" "BetterDiscord"]
 let dst = $env.CFG
 

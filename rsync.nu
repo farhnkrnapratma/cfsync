@@ -1,12 +1,22 @@
-#!/bin/sh
+#!/bin/nu
 
-# TODO: Work on this script until it's done.
+let src = ["aura/" "wezterm/" "nvim/" "nushell/" "cosmic/" "BetterDiscord/"] 
+let dst = $env.CFG
 
-cfg="$HOME/.config"
+print "\n:: RSYNC\n"
 
-rsync -av --delete "$cfg/aura/" ./aura/
-rsync -av --delete "$cfg/wezterm/" ./wezterm/
-rsync -av --delete "$cfg/nvim/" ./nvim/
-rsync -av --delete "$cfg/nushell/" ./nushell/
-rsync -av --delete "$cfg/cosmic/" ./cosmic/
-rsync -av --delete "$cfg/BetterDiscord/" ./BetterDiscord/
+for $folder in $src {
+  let fpath = ($dst | path join $folder)
+  printf "Syncing folder '%s' with '%s'...\n" $fpath $folder
+  rsync -av --delete $fpath $folder
+}
+
+rm -rf "nushell/history.txt"
+
+let push_timestamp = (date now | format date "%F %T %z")
+
+print "\n:: GIT\n"
+
+git add .
+git commit -m $"[($push_timestamp)] :: Sync new config\(s\) from localhost"
+git push
