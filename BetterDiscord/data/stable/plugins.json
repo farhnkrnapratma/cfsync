@@ -2,5 +2,15 @@
     "BDFDB": true,
     "CallTimeCounter": false,
     "ReadAllNotificationsButton": true,
-    "SpotifyControls": false
+    "SpotifyControls": true,
+    "ImageUtilities": true,
+    "ShowBadgesInChat": true,
+    "FriendNotifications": true,
+    "ShowConnections": true,
+    "BetterFriendList": true,
+    "DoNotTrack": true,
+    "QuickMention": true,
+    "StaffTag": true,
+    "LastMessageDate": true,
+    "PasscodeLock": true
 }

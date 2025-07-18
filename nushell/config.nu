@@ -15,7 +15,7 @@ def install_package [source: string, package: string, repo?: string] {
         _ => { aura -S $package }
       }
     },
-    "aur" => { aura -A aur/($package) },
+    "aur" => { aura -A $package },
     "snap" => { sudo snap install $package },
     "fhub" => { flatpak install $package },
     _ => { echo "Unknown source" }
@@ -43,13 +43,13 @@ def uninstall_package [source: string, package: string] {
 
 def update_package [option?: string] {
   match $option {
-    "arch" => { aura -Syu },
-    "aur" => { aura -Ayu },
+    "arch" => { aura -Syu --noconfirm },
+    "aur" => { aura -Ayu --noconfirm },
     "snap" => { sudo snap refresh },
     "fhub" => { flatpak refresh },
     _ => {
-      aura -Syu
-      aura -Ayu
+      aura -Syu --noconfirm
+      aura -Ayu --noconfirm
       sudo snap refresh
       flatpak update
     }

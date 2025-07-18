@@ -169,7 +169,6 @@ module.exports = (_ => {
 					}
 					${BDFDB.dotCN._readallnotificationsbuttonframe} {
 						--guildbar-avatar-size: 48px;
-						margin-bottom: 10px;
 					}
 					${BDFDB.dotCN._readallnotificationsbuttonframe}:active {
 						transform: translateY(1px);
@@ -294,7 +293,7 @@ module.exports = (_ => {
 					BDFDB.ReactUtils.createElement(BDFDB.LibraryComponents.TooltipContainer, {
 						text: `${BDFDB.LanguageUtils.LanguageStrings.CLOSE} (${BDFDB.LanguageUtils.LanguageStrings.FORM_LABEL_ALL})`,
 						children: BDFDB.ReactUtils.createElement(BDFDB.LibraryComponents.Clickable, {
-							className: BDFDB.disCNS.messagespopoutbutton + BDFDB.disCNS.messagespopoutbuttonsecondary + BDFDB.disCN.messagespopoutbuttonsize32,
+							className: BDFDB.disCNS.messagespopoutbutton + BDFDB.disCNS.messagespopoutbuttontertiary + BDFDB.disCN.messagespopoutbuttonsize32,
 							children: BDFDB.ReactUtils.createElement(BDFDB.LibraryComponents.SvgIcon, {
 								nativeClass: true,
 								name: BDFDB.LibraryComponents.SvgIcon.Names.CLOSE,

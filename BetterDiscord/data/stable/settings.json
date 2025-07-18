@@ -1,7 +1,7 @@
 {
     "general": {
         "voiceDisconnect": false,
-        "showToasts": true,
+        "showToasts": false,
         "mediaKeys": false,
         "bdContextMenu": true,
         "themeAttributes": true

@@ -1,0 +1,69 @@
+{
+	"all": {
+		"badgeCache": {
+			"1007923671358263436": {
+				"badges": [
+					{
+						"id": "hypesquad_house_1",
+						"description": "HypeSquad Bravery",
+						"icon": "8a88d63823d8a71cd5e390baa45efa02",
+						"link": "https://discord.com/settings/hypesquad-online"
+					}
+				],
+				"date": 1752777331364
+			},
+			"1194862885990580285": {
+				"badges": [
+					{
+						"id": "bot_commands",
+						"description": "Supports Commands",
+						"icon": "6f9e37f9029ff57aef81db857890005e",
+						"link": "https://discord.com/blog/welcome-to-the-new-era-of-discord-apps?ref=badge"
+					}
+				],
+				"date": 1752777329829
+			},
+			"1211639676318908457": {
+				"badges": [],
+				"date": 1752777836918
+			},
+			"1270603881143074877": {
+				"badges": [],
+				"date": 1752777328260
+			},
+			"411753933003030568": {
+				"badges": [
+					{
+						"id": "hypesquad_house_3",
+						"description": "HypeSquad Balance",
+						"icon": "3aa41de486fa12454c3761e8e223442e",
+						"link": "https://discord.com/settings/hypesquad-online"
+					},
+					{
+						"id": "quest_completed",
+						"description": "Completed a Quest",
+						"icon": "7d9ae358c8c5e118768335dbe68b4fb8",
+						"link": "https://discord.com/discovery/quests"
+					}
+				],
+				"date": 1752777334745
+			},
+			"444776181473214465": {
+				"badges": [
+					{
+						"id": "hypesquad_house_1",
+						"description": "HypeSquad Bravery",
+						"icon": "8a88d63823d8a71cd5e390baa45efa02",
+						"link": "https://discord.com/settings/hypesquad-online"
+					},
+					{
+						"id": "legacy_username",
+						"description": "Originally known as OPHELLIA#5752",
+						"icon": "6de6d34650760ba5551a79732e98ed60"
+					}
+				],
+				"date": 1752777332992
+			}
+		}
+	}
+}

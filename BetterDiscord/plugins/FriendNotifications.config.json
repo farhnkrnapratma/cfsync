@@ -1,0 +1,125 @@
+{
+	"1211639676318908457": {
+		"amounts": {
+			"toastTime": 5,
+			"checkInterval": 10
+		},
+		"choices": {
+			"toastPosition": "right"
+		},
+		"dates": {
+			"logDate": {}
+		},
+		"general": {
+			"addOnlineCount": true,
+			"showDiscriminator": false,
+			"showTimestamp": false,
+			"muteOnDND": false,
+			"openOnClick": false
+		},
+		"notificationSounds": {
+			"toastonline": {
+				"url": null,
+				"song": null,
+				"mute": false
+			},
+			"desktoponline": {
+				"url": null,
+				"song": null,
+				"mute": false
+			},
+			"toastidle": {
+				"url": null,
+				"song": null,
+				"mute": false
+			},
+			"desktopidle": {
+				"url": null,
+				"song": null,
+				"mute": false
+			},
+			"toastdnd": {
+				"url": null,
+				"song": null,
+				"mute": false
+			},
+			"desktopdnd": {
+				"url": null,
+				"song": null,
+				"mute": false
+			},
+			"toastplaying": {
+				"url": null,
+				"song": null,
+				"mute": false
+			},
+			"desktopplaying": {
+				"url": null,
+				"song": null,
+				"mute": false
+			},
+			"toastlistening": {
+				"url": null,
+				"song": null,
+				"mute": false
+			},
+			"desktoplistening": {
+				"url": null,
+				"song": null,
+				"mute": false
+			},
+			"toaststreaming": {
+				"url": null,
+				"song": null,
+				"mute": false
+			},
+			"desktopstreaming": {
+				"url": null,
+				"song": null,
+				"mute": false
+			},
+			"toastscreensharing": {
+				"url": null,
+				"song": null,
+				"mute": false
+			},
+			"desktopscreensharing": {
+				"url": null,
+				"song": null,
+				"mute": false
+			},
+			"toastoffline": {
+				"url": null,
+				"song": null,
+				"mute": false
+			},
+			"desktopoffline": {
+				"url": null,
+				"song": null,
+				"mute": false
+			}
+		},
+		"notificationStrings": {
+			"online": "$user changed status to '$status'",
+			"idle": "$user changed status to '$status'",
+			"dnd": "$user changed status to '$status'",
+			"playing": "$user started playing '$game'",
+			"listening": "$user started listening to '$song'",
+			"streaming": "$user started streaming '$game'",
+			"screensharing": "$user started screensharing",
+			"offline": "$user changed status to '$status'",
+			"login": "$user just logged in '$status'",
+			"custom": "$user changed status to '$custom'"
+		},
+		"observed": {
+			"friends": {
+				"411753933003030568": {},
+				"444776181473214465": {},
+				"1007923671358263436": {},
+				"1270603881143074877": {},
+				"1295401340708589680": {}
+			},
+			"strangers": {}
+		}
+	}
+}

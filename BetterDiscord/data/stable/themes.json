@@ -1,7 +1,7 @@
 {
     "Catppuccin Frappe": false,
-    "Gruvbox Dark": true,
+    "Gruvbox Dark": false,
     "Catppuccin Latte": false,
     "Catppuccin Macchiato": false,
-    "Catppuccin Mocha": false
+    "Catppuccin Mocha": true
 }
