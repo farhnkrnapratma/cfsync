@@ -1,6 +1,6 @@
 #!/bin/nu
 
-let src = ["aura/" "wezterm/" "nvim/" "nushell/" "cosmic/" "BetterDiscord/"] 
+let src = ["wezterm/" "nvim/" "nushell/" "cosmic/" "BetterDiscord/"] 
 let dst = $env.CFG
 
 print "\n :: RSYNC\n"

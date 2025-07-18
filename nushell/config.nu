@@ -1,52 +1,63 @@
-$env.config.show_banner = false
-$env.EDITOR = "nvim"
-
-def install_package [source: string, package: string, repo?: string] {
-  match $source {
-    "arch" => {
-      match $repo {
-        "c" => { aura -S extra/($package) },
-        "ct" => { aura -S core-testing/($package) },
-        "e" => { aura -S extra/($package) },
-        "et" => { aura -S extra/($package) },
-        "m" => { aura -S multilib/($package) },
-        "mt" => { aura -S multilib-testing/($package) },
-        "caur" => { aura -S chaotic-aur/($package) },
-        _ => { aura -S $package }
+def rik-install [source?: string, package?: string, repo?: string] {
+  if (($source | is-empty) or ($package | is-empty)) {
+    print ":: Error: \e[36m'<package>'\e[0m can't be empty."
+    return
+  } else {
+    match $source {
+      "arch" => {
+        match $repo {
+          "c" => { sudo pacman -S extra/($package) }, 
+          "e" => { sudo pacman -S extra/($package) },
+          "m" => { sudo pacman -S multilib/($package) },
+          "ct" => { sudo pacman -S core-testing/($package) },
+          "et" => { sudo pacman -S extra/($package) },
+          "mt" => { sudo pacman -S multilib-testing/($package) },
+          "ca" => { sudo pacman -S chaotic-aur/($package) },
+          _ => { sudo pacman -S $package }
+        }
+      },
+      "aur" => { aura -A $package },
+      "snap" => { sudo snap install $package },
+      "fpak" => { flatpak install $package },
+      _ => {
+        printf "Unknown source: '%s'" $source
+        return
       }
-    },
-    "aur" => { aura -A $package },
-    "snap" => { sudo snap install $package },
-    "fhub" => { flatpak install $package },
-    _ => { echo "Unknown source" }
+    }
   }
 }
 
-def search_package [source: string, package: string] {
+def rik-query [source: string, package: string] {
   match $source {
     "arch" => { aura -Ss $package },
     "aur" => { aura -As $package },
     "snap" => { snap search $package },
-    "fhub" => { flatpak search $package },
-    _ => { echo "Unknown source" }
+    "fpak" => { flatpak search $package },
+    _ => {
+      printf "Unknown source: '%s'" $source
+      return
+    }
   }
 }
 
-def uninstall_package [source: string, package: string] {
+def rik-remove [source: string, package: string] {
   match $source {
     "sys" => { sudo pacman -Rns $package },
     "snap" => { sudo snap remove $package },
-    "fhub" => { flatpak uninstall $package },
-    _ => { echo "Unknown" }
+    "fpak" => { flatpak uninstall $package },
+    _ => {
+      printf "Unknown source: '%s'" $source
+      return
+    }
   }
 }
 
-def update_package [option?: string] {
+def rik-sync [option?: string] {
   match $option {
     "arch" => { aura -Syu --noconfirm },
     "aur" => { aura -Ayu --noconfirm },
     "snap" => { sudo snap refresh },
-    "fhub" => { flatpak update },
+    "fpak" => { flatpak update },
     _ => {
       aura -Syu --noconfirm
       aura -Ayu --noconfirm
@@ -56,20 +67,43 @@ def update_package [option?: string] {
   }
 }
 
-def serv [action: string, service: string] {
-  def ssys [longact: string] {
+def rik-serv [action: string, service: string] {
+  def syst [longact: string] {
     sudo systemctl $longact $service
   }
   if ($action == null or $service == null) {
-    printf "Argument action or service can't be empty."
+    printf "Argument <action> or <service> can't be empty."
     return
   } else {
     match $action {
-      "i" => { ssys "status" },
-      "e" => { ssys "enable" },
-      "s" => { ssys "start" },
-      "x" => { ssys "stop" },
-      "d" => { ssys "disable" },
+      "i" => { syst "status" },
+      "e" => { syst "enable" },
+      "d" => { syst "disable" },
+      "s" => { syst "start" },
+      "x" => { syst "stop" },
+      _ => {
+        printf "Unknown action: '%s'" $action
+        return
+      }
+    }
+  }
+}
+
+def rik-wifi [action: string, ssid?: string] {
+  if ($action | is-empty) {
+    print "Argument <action> can't be empty."
+    return
+  } else {
+    match $action {
+      "c" => {
+        if ($ssid | is-empty) {
+          print "Argument <ssid> can't be empty."
+          return
+        } else {
+          nmcli device wifi connect $ssid
+        }
+      },
+      "l" => { nmcli device wifi list },
       _ => {
         printf "Unknown action: '%s'" $action
         return
@@ -81,33 +115,21 @@ def serv [action: string, service: string] {
 def archsync [] {
   cd ($env.HOME)/Projects/archsync/
   nu archsync.nu
-  cd
+  cd -
 }
 
-def nmc [ssid: string] {
-  if ($ssid | is-empty) {
-    echo "SSID can't be empty."
-    return
-  } else {
-    nmcli device wifi connect $ssid --ask
-  }
-}
-
-def nml [] {
-  nmcli device wifi list
-}
-
-alias a = serv
+alias a = rik-serv
 alias c = clear
 alias d = rm -rf
-alias e = ^$env.EDITOR
 alias g = grep --color
-alias i = install_package
+alias i = rik-install
 alias l = ls -la
-alias r = uninstall_package
-alias s = search_package
-alias u = update_package
+alias q = rik-query
+alias r = rik-remove
+alias s = rik-sync
+alias v = nvim
 alias x = exit
-alias nuc = ^$env.EDITOR $nu.config-path
+alias cn = config nu
+alias ce = config env
 
 source ~/.zoxide.nu
