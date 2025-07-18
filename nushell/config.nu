@@ -56,6 +56,12 @@ def update_package [option?: string] {
   }
 }
 
+def archsync [] {
+  cd ($env.HOME)/Projects/archsync/
+  nu archsync.nu
+  cd
+}
+
 def nmc [ssid: string] {
   if ($ssid | is-empty) {
     echo "SSID can't be empty."
@@ -79,7 +85,6 @@ alias r = uninstall_package
 alias s = search_package
 alias u = update_package
 alias x = exit
-alias async = nu ($env.HOME)/Projects/archsync/archsync.nu
 alias nuc = ^$env.EDITOR $nu.config-path
 
 source ~/.zoxide.nu
