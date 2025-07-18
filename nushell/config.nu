@@ -46,12 +46,34 @@ def update_package [option?: string] {
     "arch" => { aura -Syu --noconfirm },
     "aur" => { aura -Ayu --noconfirm },
     "snap" => { sudo snap refresh },
-    "fhub" => { flatpak refresh },
+    "fhub" => { flatpak update },
     _ => {
       aura -Syu --noconfirm
       aura -Ayu --noconfirm
       sudo snap refresh
       flatpak update
+    }
+  }
+}
+
+def serv [action: string, service: string] {
+  def ssys [longact: string] {
+    sudo systemctl $longact $service
+  }
+  if ($action == null or $service == null) {
+    printf "Argument action or service can't be empty."
+    return
+  } else {
+    match $action {
+      "i" => { ssys "status" },
+      "e" => { ssys "enable" },
+      "s" => { ssys "start" },
+      "x" => { ssys "stop" },
+      "d" => { ssys "disable" },
+      _ => {
+        printf "Unknown action: '%s'" $action
+        return
+      }
     }
   }
 }
@@ -75,6 +97,7 @@ def nml [] {
   nmcli device wifi list
 }
 
+alias a = serv
 alias c = clear
 alias d = rm -rf
 alias e = ^$env.EDITOR
