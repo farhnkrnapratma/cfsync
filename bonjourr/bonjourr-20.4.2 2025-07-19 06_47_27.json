@@ -9,17 +9,17 @@
   "favicon": "",
   "tabtitle": "",
   "greeting": "",
-  "pagegap": 0,
-  "pagewidth": 1100,
+  "pagegap": 2,
+  "pagewidth": 1300,
   "time": true,
   "main": true,
   "dateformat": "auto",
-  "background_blur": 24,
-  "background_bright": 0.62,
+  "background_blur": 38,
+  "background_bright": 0.5,
   "background_type": "local",
   "quicklinks": true,
   "textShadow": 0,
-  "announcements": "major",
+  "announcements": "all",
   "review": -1,
   "css": "",
   "hide": {
@@ -35,6 +35,13 @@
   "linkbackgrounds": false,
   "linknewtab": true,
   "linksrow": "8",
+  "linksibnolb": {
+    "_id": "linksibnolb",
+    "order": 0,
+    "parent": "default",
+    "title": "Gemini",
+    "url": "https://gemini.google.com"
+  },
   "linkgroups": {
     "groups": [
       "default"
@@ -81,7 +88,7 @@
     "on": true,
     "align": "left",
     "opacity": 0.1,
-    "text": "#  TODO\n\n[ ] ​Finish scripting Nushell",
+    "text": "# 📑 TODO\n\n[ ] 💲 Finish scripting Nushell\n\n[ ] 🔄 Design workflow for ossync",
     "width": 60
   },
   "searchbar": {
@@ -99,11 +106,11 @@
     "on": true,
     "author": true,
     "frequency": "hour",
-    "last": 1752905418183,
+    "last": 1752966484115,
     "type": "classic"
   },
   "font": {
-    "size": "16.7",
+    "size": "14.85",
     "family": "Fira Code",
     "system": false,
     "weight": "300",
@@ -111,7 +118,7 @@
   },
   "supporters": {
     "closed": true,
-    "enabled": true,
+    "enabled": false,
     "month": 7
   },
   "move": {

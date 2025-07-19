@@ -1,14 +1,14 @@
 #!/bin/nu
 
-let src = ["wezterm/" "nvim/" "nushell/" "cosmic/" "BetterDiscord/"] 
-let dst = $env.CFG
+let srcf = $env.cfg
+let dsts = ["wezterm/" "nvim/" "nushell/" "cosmic/" "BetterDiscord/"] 
 
 print "\n :: RSYNC\n"
 
-for $folder in $src {
-  let fpath = ($dst | path join $folder)
-  printf " :: Syncing folder '%s' with '%s'...\n\n" $fpath $folder
-  rsync -av --delete $fpath $folder
+for $dst in $dsts {
+  let fpath = ($srcf | path join $dst)
+  printf " :: Syncing folder '%s' with '%s'...\n\n" $fpath $dst
+  rsync -av --delete $fpath $dst
   print "\n :: Done.\n"
 }
 
