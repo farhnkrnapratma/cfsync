@@ -2,7 +2,6 @@
 # TODO: Design workflow of osync
 
 def rik-install [source: string, ...packages: string] {
-  print $packages
   for $package in $packages {
     match $source {
       "a" => { paru -S $package },
@@ -76,7 +75,7 @@ def rik-serv [action: string, service: string] {
 def rik-wifi [action: string, ssid?: string] {
   match $action {
     "c" => {
-      if ($ssid | is-empty) {
+      if ($ssid == null) {
         print ":: Error: Argument <ssid> can not be empty"
         return
       } else {
@@ -84,6 +83,7 @@ def rik-wifi [action: string, ssid?: string] {
       }
     },
     "l" => { nmcli device wifi list },
+    "r" => { nmcli device wifi rescan },
     _ => {
       printf ":: Error: Undefined <action>: '%s'" $action
       return

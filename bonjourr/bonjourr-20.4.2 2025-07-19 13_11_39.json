@@ -1,0 +1,145 @@
+{
+  "about": {
+    "browser": "chrome",
+    "version": "20.4.2"
+  },
+  "showall": true,
+  "lang": "en",
+  "dark": "system",
+  "favicon": "",
+  "tabtitle": "",
+  "greeting": "",
+  "pagegap": 0,
+  "pagewidth": 1100,
+  "time": true,
+  "main": true,
+  "dateformat": "auto",
+  "background_blur": 24,
+  "background_bright": 0.62,
+  "background_type": "local",
+  "quicklinks": true,
+  "textShadow": 0,
+  "announcements": "major",
+  "review": -1,
+  "css": "",
+  "hide": {
+    "date": false,
+    "greetings": false,
+    "settingsicon": true,
+    "weatherdesc": false,
+    "weathericon": false,
+    "clock": false
+  },
+  "linkstyle": "small",
+  "linktitles": true,
+  "linkbackgrounds": false,
+  "linknewtab": true,
+  "linksrow": "8",
+  "linkgroups": {
+    "groups": [
+      "default"
+    ],
+    "on": false,
+    "pinned": [],
+    "selected": "default",
+    "synced": []
+  },
+  "clock": {
+    "ampm": false,
+    "ampmlabel": false,
+    "analog": false,
+    "seconds": false,
+    "size": 1.375,
+    "timezone": "auto",
+    "worldclocks": false
+  },
+  "analogstyle": {
+    "background": "#fff2",
+    "border": "#ffff",
+    "face": "none",
+    "hands": "modern",
+    "shape": "round"
+  },
+  "worldclocks": [],
+  "unsplash": {
+    "collection": "",
+    "every": "hour",
+    "lastCollec": "noon",
+    "time": 1752795608381
+  },
+  "weather": {
+    "city": "palembang",
+    "forecast": "auto",
+    "geolocation": "off",
+    "moreinfo": "windy",
+    "provider": "",
+    "temperature": "actual",
+    "unit": "metric"
+  },
+  "notes": {
+    "background": "#fff0",
+    "on": true,
+    "align": "left",
+    "opacity": 0.1,
+    "text": "#  TODO\n\n[ ] ​Finish scripting Nushell",
+    "width": 60
+  },
+  "searchbar": {
+    "background": "#fff0",
+    "on": true,
+    "opacity": 0.1,
+    "width": 60,
+    "engine": "google",
+    "newtab": false,
+    "placeholder": ":: Search something here...",
+    "request": "",
+    "suggestions": true
+  },
+  "quotes": {
+    "on": true,
+    "author": true,
+    "frequency": "hour",
+    "last": 1752905418183,
+    "type": "classic"
+  },
+  "font": {
+    "size": "16.7",
+    "family": "Fira Code",
+    "system": false,
+    "weight": "300",
+    "weightlist": []
+  },
+  "supporters": {
+    "closed": true,
+    "enabled": true,
+    "month": 7
+  },
+  "move": {
+    "layouts": {
+      "single": {
+        "grid": [
+          [
+            "time"
+          ],
+          [
+            "main"
+          ],
+          [
+            "searchbar"
+          ],
+          [
+            "notes"
+          ],
+          [
+            "quicklinks"
+          ],
+          [
+            "quotes"
+          ]
+        ],
+        "items": {}
+      }
+    },
+    "selection": "single"
+  }
+}
