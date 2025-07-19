@@ -2,18 +2,16 @@
 # TODO: Design workflow of osync
 
 def rik-install [source: string, ...packages: string] {
-  for $package in $packages {
-    match $source {
-      "a" => { paru -S $package },
-      "s" => { sudo snap install $package },
-      "f" => { flatpak install $package },
-      _ => {
-        printf ":: Error  : Unknown [source]: '%s'\n" $source
-        printf ":: Usage  : rik-install [source] [package] [repo?]\n"
-        printf ":: Source : [a]rch/aur, [s]nap, [f]lathub\n" 
-        printf ":: Help   : Try passing a, s, or f instead"
-        return
-      }
+  match $source {
+    "a" => { paru -S ...$packages },
+    "s" => { sudo snap install ...$packages },
+    "f" => { flatpak install ...$packages },
+    _ => {
+      printf ":: Error  : Unknown [source]: '%s'\n" $source
+      printf ":: Usage  : rik-install [source] [...packages]\n"
+      printf ":: Source : [a]rch/aur, [s]nap, [f]lathub\n" 
+      printf ":: Help   : Try passing a, s, or f instead"
+      return
     }
   }
 }
@@ -24,33 +22,46 @@ def rik-query [source: string, package: string] {
     "s" => { snap search $package },
     "f" => { flatpak search $package },
     _ => {
-      printf "Unknown source: '%s'" $source
+      printf ":: Error  : Unknown [source]: '%s'\n" $source
+      printf ":: Usage  : rik-query [source] [package]\n"
+      printf ":: Source : [a]rch/aur, [s]nap, [f]lathub\n" 
+      printf ":: Help   : Try passing a, s, or f instead"
       return
     }
   }
 }
 
-def rik-rm [source: string, package: string] {
+def rik-remove [source: string, ...packages: string] {
   match $source {
-    "a" => { paru -Rns $package },
-    "s" => { sudo snap remove $package },
-    "f" => { flatpak uninstall $package },
+    "a" => { paru -Rns ...$packages },
+    "s" => { sudo snap remove ...$packages },
+    "f" => { flatpak uninstall ...$packages },
     _ => {
-      printf "Unknown source: '%s'" $source
+      printf ":: Error  : Unknown [source]: '%s'\n" $source
+      printf ":: Usage  : rik-remove [source] [...packages]\n"
+      printf ":: Source : [a]rch/aur, [s]nap, [f]lathub\n" 
+      printf ":: Help   : Try passing a, s, or f instead"
       return
     }
   }
 }
 
-def rik-sync [option?: string] {
-  match $option {
+def rik-sync [source?: string] {
+  match $source {
     "a" => { paru -Syu --noconfirm },
     "s" => { sudo snap refresh },
     "f" => { flatpak update },
-    _ => {
+    null => {
       paru -Syu --noconfirm
       sudo snap refresh
       flatpak update
+    },
+    _ => {
+      printf ":: Error  : Unknown [source]: '%s'\n" $source
+      printf ":: Usage  : rik-sync [source?]\n"
+      printf ":: Source : [a]rch/aur, [s]nap, [f]lathub\n" 
+      printf ":: Help   : Try passing a, s, or f instead"
+      return
     }
   }
 }
@@ -60,13 +71,16 @@ def rik-serv [action: string, service: string] {
     sudo systemctl $action $service
   }
   match $action {
-    "i" => { serv "status" },
+    "s" => { serv "status" },
     "e" => { serv "enable" },
     "d" => { serv "disable" },
-    "s" => { serv "start" },
-    "x" => { serv "stop" },
+    "t" => { serv "start" },
+    "p" => { serv "stop" },
     _ => {
-      printf "Unknown action: '%s'" $action
+      printf ":: Error  : Unknown [action]: '%s'\n" $action
+      printf ":: Usage  : rik-serv [action] [service]\n"
+      printf ":: Action : [s]tatus, [e]nable, [d]isable, star[t], sto[p]\n" 
+      printf ":: Help   : Try passing s, e, d, t, or p instead"
       return
     }
   }
@@ -76,7 +90,7 @@ def rik-wifi [action: string, ssid?: string] {
   match $action {
     "c" => {
       if ($ssid == null) {
-        print ":: Error: Argument <ssid> can not be empty"
+        printf ":: Error  : Required [ssid] can not be empty while [action]: [c]onnect"
         return
       } else {
         nmcli device wifi connect $ssid
@@ -85,7 +99,10 @@ def rik-wifi [action: string, ssid?: string] {
     "l" => { nmcli device wifi list },
     "r" => { nmcli device wifi rescan },
     _ => {
-      printf ":: Error: Undefined <action>: '%s'" $action
+      printf ":: Error  : Unknown [action]: '%s'\n" $action
+      printf ":: Usage  : rik-wifi [action] [ssid?]\n"
+      printf ":: Action : [c]onnect, [l]ist, [r]escan\n" 
+      printf ":: Help   : Try passing c, l, or r instead"
       return
     }
   }
@@ -104,7 +121,7 @@ alias g = grep --color
 alias i = rik-install
 alias l = ls -la
 alias q = rik-query
-alias r = rik-rm
+alias r = rik-remove
 alias s = rik-sync
 alias v = nvim
 alias w = rik-wifi
