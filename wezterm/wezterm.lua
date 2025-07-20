@@ -19,8 +19,8 @@ return {
   use_fancy_tab_bar = false,
   window_decorations = "NONE",
   window_padding = {
-    left = 0,
-    right = 0,
+    left = 8,
+    right = 2,
     top = 0,
     bottom = 0,
   },
