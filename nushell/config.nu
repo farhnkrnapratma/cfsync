@@ -109,9 +109,14 @@ def rik-wifi [action: string, ssid?: string] {
 }
 
 def archsync [] {
-  cd ($env.HOME)/Projects/archsync/
-  nu archsync.nu
-  cd -
+  if (is-admin) {
+    print "You are not supposed to run this sync."
+    return
+  } else {
+    cd ($env.HOME)/Projects/archsync/
+    nu archsync.nu
+    cd -
+  }
 }
 
 alias a = rik-serv
