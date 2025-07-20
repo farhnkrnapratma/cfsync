@@ -1,7 +1,7 @@
 #!/bin/nu
 
 let srcf = $env.cfg
-let dsts = ["wezterm/" "nvim/" "nushell/" "cosmic/" "BetterDiscord/"] 
+let dsts = ["starship.toml" "wezterm/" "nvim/" "nushell/" "cosmic/" "BetterDiscord/"] 
 
 print "\n :: RSYNC\n"
 

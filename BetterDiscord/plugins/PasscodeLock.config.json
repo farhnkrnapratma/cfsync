@@ -17,6 +17,6 @@
     },
     "attempts": 0,
     "delayUntil": null,
-    "locked": true,
-    "autoDeafened": true
+    "locked": false,
+    "autoDeafened": false
 }

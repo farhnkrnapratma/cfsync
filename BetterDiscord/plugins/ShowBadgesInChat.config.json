@@ -10,7 +10,7 @@
 						"link": "https://discord.com/settings/hypesquad-online"
 					}
 				],
-				"date": 1752777331364
+				"date": 1752983865253
 			},
 			"1152614611418366022": {
 				"badges": [],
@@ -29,11 +29,41 @@
 			},
 			"1211639676318908457": {
 				"badges": [],
-				"date": 1752892117716
+				"date": 1752984501187
 			},
 			"1270603881143074877": {
 				"badges": [],
-				"date": 1752892155460
+				"date": 1752991667446
+			},
+			"1307703669038256129": {
+				"badges": [],
+				"date": 1752984490357
+			},
+			"1307704271583842384": {
+				"badges": [],
+				"date": 1752984490823
+			},
+			"257907808090062848": {
+				"badges": [
+					{
+						"id": "hypesquad_house_3",
+						"description": "HypeSquad Balance",
+						"icon": "3aa41de486fa12454c3761e8e223442e",
+						"link": "https://discord.com/settings/hypesquad-online"
+					},
+					{
+						"id": "legacy_username",
+						"description": "Originally known as Fimauu#8736",
+						"icon": "6de6d34650760ba5551a79732e98ed60"
+					},
+					{
+						"id": "quest_completed",
+						"description": "Completed a Quest",
+						"icon": "7d9ae358c8c5e118768335dbe68b4fb8",
+						"link": "https://discord.com/discovery/quests"
+					}
+				],
+				"date": 1752984494171
 			},
 			"411753933003030568": {
 				"badges": [
@@ -67,6 +97,38 @@
 					}
 				],
 				"date": 1752777332992
+			},
+			"748865116174418001": {
+				"badges": [
+					{
+						"id": "premium",
+						"description": "Subscriber since Jun 7, 2025",
+						"icon": "2ba85e8026a8614b640c2837bcdfe21b",
+						"link": "https://discord.com/settings/premium"
+					},
+					{
+						"id": "hypesquad_house_1",
+						"description": "HypeSquad Bravery",
+						"icon": "8a88d63823d8a71cd5e390baa45efa02",
+						"link": "https://discord.com/settings/hypesquad-online"
+					},
+					{
+						"id": "legacy_username",
+						"description": "Originally known as Rodeosv#7814",
+						"icon": "6de6d34650760ba5551a79732e98ed60"
+					}
+				],
+				"date": 1752984493165
+			},
+			"829129367875223572": {
+				"badges": [
+					{
+						"id": "legacy_username",
+						"description": "Originally known as Naufal Doom#1618",
+						"icon": "6de6d34650760ba5551a79732e98ed60"
+					}
+				],
+				"date": 1752984492641
 			}
 		}
 	}

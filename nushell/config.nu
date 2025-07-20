@@ -134,5 +134,7 @@ alias x = exit
 alias cn = config nu
 alias ce = config env
 
-source ~/.zoxide.nu
+mkdir ($nu.data-dir | path join "vendor/autoload")
+starship init nu | save -f ($nu.data-dir | path join "vendor/autoload/starship.nu")
 
+source ~/.zoxide.nu
