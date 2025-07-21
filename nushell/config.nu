@@ -1,6 +1,3 @@
-# TODO: Enhance all functionalities
-# TODO: Design workflow of osync
-
 def rik-install [source: string, ...packages: string] {
   match $source {
     "a" => { paru -S ...$packages },
@@ -9,7 +6,7 @@ def rik-install [source: string, ...packages: string] {
     _ => {
       printf ":: Error  : Unknown [source]: '%s'\n" $source
       printf ":: Usage  : rik-install [source] [...packages]\n"
-      printf ":: Source : [a]rch/aur, [s]nap, [f]lathub\n" 
+      printf ":: Source : [a]rch, [s]nap, [f]lathub\n" 
       printf ":: Help   : Try passing a, s, or f instead"
       return
     }
@@ -24,7 +21,7 @@ def rik-query [source: string, package: string] {
     _ => {
       printf ":: Error  : Unknown [source]: '%s'\n" $source
       printf ":: Usage  : rik-query [source] [package]\n"
-      printf ":: Source : [a]rch/aur, [s]nap, [f]lathub\n" 
+      printf ":: Source : [a]rch, [s]nap, [f]lathub\n" 
       printf ":: Help   : Try passing a, s, or f instead"
       return
     }
@@ -39,7 +36,7 @@ def rik-remove [source: string, ...packages: string] {
     _ => {
       printf ":: Error  : Unknown [source]: '%s'\n" $source
       printf ":: Usage  : rik-remove [source] [...packages]\n"
-      printf ":: Source : [a]rch/aur, [s]nap, [f]lathub\n" 
+      printf ":: Source : [a]rch, [s]nap, [f]lathub\n" 
       printf ":: Help   : Try passing a, s, or f instead"
       return
     }
@@ -59,7 +56,7 @@ def rik-sync [source?: string] {
     _ => {
       printf ":: Error  : Unknown [source]: '%s'\n" $source
       printf ":: Usage  : rik-sync [source?]\n"
-      printf ":: Source : [a]rch/aur, [s]nap, [f]lathub\n" 
+      printf ":: Source : [a]rch, [s]nap, [f]lathub\n" 
       printf ":: Help   : Try passing a, s, or f instead"
       return
     }
