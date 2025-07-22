@@ -1,16 +1,15 @@
 {
     "BDFDB": true,
-    "CallTimeCounter": false,
-    "ReadAllNotificationsButton": true,
-    "SpotifyControls": true,
-    "ImageUtilities": true,
-    "ShowBadgesInChat": true,
-    "FriendNotifications": true,
-    "ShowConnections": true,
     "BetterFriendList": true,
     "DoNotTrack": true,
-    "QuickMention": true,
-    "StaffTag": true,
+    "FriendNotifications": true,
+    "ImageUtilities": true,
     "LastMessageDate": true,
-    "PasscodeLock": true
+    "PasscodeLock": true,
+    "QuickMention": true,
+    "ReadAllNotificationsButton": true,
+    "ShowBadgesInChat": true,
+    "ShowConnections": true,
+    "SpotifyControls": true,
+    "StaffTag": true
 }
