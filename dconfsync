@@ -8,7 +8,7 @@ print "\n :: RSYNC\n"
 for $dst in $dsts {
   let fpath = ($srcf | path join $dst)
   printf " :: Syncing folder '%s' with '%s'...\n\n" $fpath $dst
-  rsync -av --delete $fpath $dst
+  rsync -av --delete $fpath $"target/($dst)"
   print "\n :: Done.\n"
 }
 

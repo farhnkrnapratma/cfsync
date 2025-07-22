@@ -1,15 +1,7 @@
 {
 	"all": {
 		"buttons": {
-			"share": {
-				"small": false,
-				"big": true
-			},
-			"shuffle": {
-				"small": false,
-				"big": true
-			},
-			"previous": {
+			"next": {
 				"small": true,
 				"big": true
 			},
@@ -17,11 +9,19 @@
 				"small": true,
 				"big": true
 			},
-			"next": {
+			"previous": {
 				"small": true,
 				"big": true
 			},
 			"repeat": {
+				"small": false,
+				"big": true
+			},
+			"share": {
+				"small": false,
+				"big": true
+			},
+			"shuffle": {
 				"small": false,
 				"big": true
 			},
@@ -31,11 +31,11 @@
 			}
 		},
 		"general": {
+			"addActivityButton": true,
 			"addBy": true,
 			"addTimeline": true,
-			"addActivityButton": true,
-			"hideDisabled": false,
-			"doubleBack": true
+			"doubleBack": true,
+			"hideDisabled": true
 		}
 	}
 }

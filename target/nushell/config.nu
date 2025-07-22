@@ -105,13 +105,13 @@ def rik-wifi [action: string, ssid?: string] {
   }
 }
 
-def archsync [] {
+def dconfsync [] {
   if (is-admin) {
     print "You are not supposed to run this sync."
     return
   } else {
-    cd ($env.HOME)/Projects/archsync/
-    nu archsync.nu
+    cd ($env.HOME)/Projects/dconfsync/
+    nu dconfsync
     cd -
   }
 }

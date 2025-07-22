@@ -11,5 +11,6 @@
     "ShowBadgesInChat": true,
     "ShowConnections": true,
     "SpotifyControls": true,
-    "StaffTag": true
+    "StaffTag": true,
+    "BetterVolume": true
 }
