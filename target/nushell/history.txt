@@ -4452,3 +4452,31 @@ clear
 l
 cn
 nvim dconfsync
+./dconfsync
+nvim .github/FUNDING.yml
+git status
+l
+nvim install
+nvim dconfsync
+nvim install
+./install
+nvim install
+./install
+nvim install
+mv install copy
+l
+mv copy dconfcopy
+l
+nvim dconfsync
+just
+crontab -e
+l
+cd
+nvim justfile
+just sync
+z archsync/
+z dconfsync/
+z Projects/dconfsync/
+l
+v dconfsync
+nvim justfile
