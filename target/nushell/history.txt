@@ -4643,3 +4643,124 @@ cn
 z dconfsync/
 z Projects/dconfsync/
 ls
+just sync
+w c Vicuna
+w r
+w l
+w r
+w l
+w c Vicuna
+paru -Ss aura
+c
+l
+clear
+l
+clear
+ls
+clear
+s
+flatpak update
+flatpak list
+flatpak remote-modify --disable flathub<\n>flatpak remote-modify --enable flathub<\n>flatpak update --appstream<\n>
+flatpak list
+flatpak update
+clear
+ls
+s
+snap update
+snap refresh
+sudo pacman -Rns flatpak
+sudo pacman -S flatpak
+sudo pacman -Sy
+sudo pacman -Syu
+sudo pacman -S flatpak
+sudo pacman -Scc
+paru -Scc
+sudo pacman -S flatpak
+paru -S flatpak
+sudo pacman -Sy archlinux-keyring<\n>
+sudo pacman-key --init<\n>sudo pacman-key --populate archlinux<\n>
+sudo pacman -Sy archlinux-keyring<\n>
+sudo rm -rf /etc/pacman.d/gnupg<\n>
+sudo pacman-key --init<\n>sudo pacman-key --populate archlinux<\n>
+sudo pacman-key --populate chaotic<\n>
+sudo pacman -Sy archlinux-keyring<\n>
+pacman-key --list-keys<\n>
+sudo pacman -Syu<\n>
+sudo pacman -Syyuu
+sudo pacman -S flatpak
+sudo pacman -S archlinux-keyring
+sudo pacman -S --help
+cn
+sudo pacman -S archlinux-keyring
+cd
+z Projects
+git clone https://archlinux.org/archlinux-keyring
+git clone https://archlinux.org/archlinux-keyring.git
+git clone https://aur.archlinux.org/archlinux-keyring.git
+git clone https://aur.archlinux.org/archlinux-keyring
+l
+cd archlinux-keyring/
+ls
+ls -la
+git status
+cd ..
+rm -rf archlinux-keyring/
+paru -Ss archlinux-keyring
+sudo pacman-key --init
+sudo pacman-key --populate
+sudo pacman -Scc
+paru -Scc
+sudo rm -rf /var/cache/pacman/pkg/download-0NkEa7
+paru -Scc
+sudo pacman -S flatpak
+sudo pacman -Syyuu
+pacman -Ss firedragon
+sudo pacman -S flatpak
+sudo rm -rf /var/cache/pacman/pkg/
+sudo pacman -S flatpak
+ls /var/cache/pacman/pkg/
+c
+sudo rm -rf /etc/pacman.d/gnupg 
+sudo pacman -Sy gnupg archlinux-keyring manjaro-keyring
+sudo pacman -Sy gnupg archlinux-keyring
+sudo pacman-key --init
+sudo pacman -Sy gnupg archlinux-keyring
+sudo pacman-key --populate archlinux
+sudo pacman -Sy gnupg archlinux-keyring
+sudo pacman-key --refresh-keys 
+sudo pacman -Syu
+sudo pacman -S flatpak
+sudo pacman -Scc<\n>
+sudo pacman -Sy archlinux-keyring<\n>
+timedatectl status<\n>
+wget https://archlinux.org/packages/core/any/archlinux-keyring/
+sudo pacman -S wget
+cd Downloads/
+ls
+sudo pacman -U archlinux-keyring-20250716-1-any.pkg.tar.zst
+sudo pacman -S wget
+sudo rm -rf /etc/pacman.d/gnupg<\n>sudo pacman-key --init<\n>sudo pacman-key --populate archlinux<\n>
+sudo pacman -S wget
+sudo pacman-key --populate chaotic<\n>
+ls
+cd
+clear
+ls
+cd Downloads/
+rm -rf archlinux-keyring-20250716-1-any.pkg.tar.zst
+cd ..
+ls
+clear
+sudo pacman-key --refresh-keys<\n>
+sudo pacman -Syu
+sudo pacman -S flatpak
+w c "Toko Manisan Uni Tina"
+s
+sudo pacman -S flatpak
+z Projects/dconfsync/
+l
+mv dconfsync dconfsync.nu
+mv dconfcopy dconfcopy.nu
+ls
+nvim justfile

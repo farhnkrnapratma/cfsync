@@ -1,6 +1,6 @@
 def erika-install [source: string, ...packages: string] {
   match $source {
-    "a" => { paru -S ...$packages },
+    "a" => { paru -S --disable-download-timeout ...$packages },
     "s" => { sudo snap install ...$packages },
     "f" => { flatpak install ...$packages },
     _ => {
@@ -45,7 +45,7 @@ def erika-remove [source: string, ...packages: string] {
 
 def erika-sync [source?: string] {
   match $source {
-    "a" => { paru -Syu --noconfirm },
+    "a" => { paru -Syu --disable-download-timeout --noconfirm },
     "s" => { sudo snap refresh },
     "f" => { flatpak update },
     null => {

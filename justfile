@@ -1,4 +1,4 @@
 sync:
-  ./dconfsync
+  ./dconfsync.nu
 copy:
-  ./dconfcopy
+  ./dconfcopy.nu
