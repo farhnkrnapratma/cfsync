@@ -4480,3 +4480,166 @@ z Projects/dconfsync/
 l
 v dconfsync
 nvim justfile
+just sync
+l
+z
+clear
+s
+cn
+erika-remove a gnome
+sudo pacman -Rns gnome
+sudo pacman -Rnsdd gnome
+clear
+l
+clear
+cn
+clear
+snap install spotify
+c
+z dconfsync/
+z Projects/dconfsync/
+l
+ls
+clear
+ls
+erika-install s spotify
+nvim dconfsync
+l
+nvim
+cd
+cd .config/nvim/lua/plugins/
+l
+nvim nvim-tree.lua
+nvim
+nvim nvim-tree.lua
+nvim
+nvim nvim-tree.lua
+cd
+z dconfsync/
+z Projects/dconfsync/
+cd
+z dconfsync/
+z Projects/dconfsync/
+z
+z Projects/dconfsync/
+z
+z dconfsync/
+z Projects/dconfsync/
+z
+z dconfsync/
+z Projects/dconfsync/
+z dconfsync/
+z
+z dconfsync/
+z Projects/dconfsync/
+z
+z dconfsync/
+z Projects/dconfsync/
+z dconfsync/
+l
+clear
+ls
+nvim 
+cd
+cd .config/nvim/lua/plugins/
+cd ..
+ls
+nvim init.lua
+nvim
+cd
+z dconfsync/
+z Projects/dconfsync/
+ls
+nvim
+cd
+z .config/nvim/
+nvim init.lua
+cd
+nvim
+z Projects/dconfsync/
+l
+nvim
+cd
+z .config/nvim/
+nvim init.lua
+cd lua/plugins/
+ls
+nvim nvim-tree.lua
+nvim
+z farhnkrnapratma/
+z Projects/farhnkrnapratma/
+nvim
+docker build -t vite-dev .
+docker build -t farhnkrnapratma-vite .
+docker system prune -a --volumes<\n>
+fastfetch 
+ls
+snap refresh
+ls
+clear
+just sync
+pacman -Ss lxqt
+pacman -Sg lxqt
+sudo pacman -S lxqt
+nvim .config/wezterm/wezterm.lua
+w c "Toko Manisan Uni Tina"
+w c Vicuna
+clear
+s
+snap run spotify
+systemctl is-active snapd
+snap run spotify
+snap install spotify
+sudo snap refresh
+sudo snap remove spotify
+sudo snap install spotify
+sudo systemctl disable gdm
+sudo systemctl enable cosmic-greeter
+sudo systemctl start cosmic-greeter
+sudo pacman -S xorg
+sudo pacman -S startc
+sudo pacman -S startx
+sudo pacman -S xorg
+sudo pacman -S xinit
+sudo pacman -Ss xinit
+sudo pacman -Ss xorg-xinit
+sudo pacman -S xorg-xinit
+nvim .config/starship.toml
+clear
+cd Downloads/
+ls
+sudo mv catppuccin-mocha /usr/share/lxqt/themes/
+sudo pacman -Rnsd lxqt
+just sync
+c
+s
+c
+sudo pacman -Rnsd lxqt
+sudo pacman -Rnsd xorg
+sudo pacman -Rnsdd xorg
+sudo pacman -Rnsdd xorg-xinit
+l
+rm -rf .Xauthority justfile
+l
+cd .config/
+l
+ls
+rm -rf lx*
+ls
+rm -rf xdg-terminals.list
+ls
+rm -rf qterminal.org/ QtProject.conf
+LS
+ls
+rm -rf qalculate/
+ls
+s
+snap run spotify
+pkill spotify
+snap kill spotify
+snap remove --purge spotify
+snap list
+cn
+z dconfsync/
+z Projects/dconfsync/
+ls

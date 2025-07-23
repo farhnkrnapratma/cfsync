@@ -1,11 +1,11 @@
-def rik-install [source: string, ...packages: string] {
+def erika-install [source: string, ...packages: string] {
   match $source {
     "a" => { paru -S ...$packages },
     "s" => { sudo snap install ...$packages },
     "f" => { flatpak install ...$packages },
     _ => {
       printf ":: Error  : Unknown [source]: '%s'\n" $source
-      printf ":: Usage  : rik-install [source] [...packages]\n"
+      printf ":: Usage  : erika-install [source] [...packages]\n"
       printf ":: Source : [a]rch, [s]nap, [f]lathub\n" 
       printf ":: Help   : Try passing a, s, or f instead"
       return
@@ -13,14 +13,14 @@ def rik-install [source: string, ...packages: string] {
   }
 }
 
-def rik-query [source: string, package: string] {
+def erika-query [source: string, package: string] {
   match $source {
     "a" => { paru -Ss $package },
     "s" => { snap search $package },
     "f" => { flatpak search $package },
     _ => {
       printf ":: Error  : Unknown [source]: '%s'\n" $source
-      printf ":: Usage  : rik-query [source] [package]\n"
+      printf ":: Usage  : erika-query [source] [package]\n"
       printf ":: Source : [a]rch, [s]nap, [f]lathub\n" 
       printf ":: Help   : Try passing a, s, or f instead"
       return
@@ -28,14 +28,14 @@ def rik-query [source: string, package: string] {
   }
 }
 
-def rik-remove [source: string, ...packages: string] {
+def erika-remove [source: string, ...packages: string] {
   match $source {
-    "a" => { paru -Rns ...$packages },
+    "a" => { paru -Rnsdd ...$packages },
     "s" => { sudo snap remove ...$packages },
     "f" => { flatpak uninstall ...$packages },
     _ => {
       printf ":: Error  : Unknown [source]: '%s'\n" $source
-      printf ":: Usage  : rik-remove [source] [...packages]\n"
+      printf ":: Usage  : erika-remove [source] [...packages]\n"
       printf ":: Source : [a]rch, [s]nap, [f]lathub\n" 
       printf ":: Help   : Try passing a, s, or f instead"
       return
@@ -43,7 +43,7 @@ def rik-remove [source: string, ...packages: string] {
   }
 }
 
-def rik-sync [source?: string] {
+def erika-sync [source?: string] {
   match $source {
     "a" => { paru -Syu --noconfirm },
     "s" => { sudo snap refresh },
@@ -55,7 +55,7 @@ def rik-sync [source?: string] {
     },
     _ => {
       printf ":: Error  : Unknown [source]: '%s'\n" $source
-      printf ":: Usage  : rik-sync [source?]\n"
+      printf ":: Usage  : erika-sync [source?]\n"
       printf ":: Source : [a]rch, [s]nap, [f]lathub\n" 
       printf ":: Help   : Try passing a, s, or f instead"
       return
@@ -63,7 +63,7 @@ def rik-sync [source?: string] {
   }
 }
 
-def rik-serv [action: string, service: string] {
+def erika-serv [action: string, service: string] {
   def serv [action: string] {
     sudo systemctl $action $service
   }
@@ -75,7 +75,7 @@ def rik-serv [action: string, service: string] {
     "p" => { serv "stop" },
     _ => {
       printf ":: Error  : Unknown [action]: '%s'\n" $action
-      printf ":: Usage  : rik-serv [action] [service]\n"
+      printf ":: Usage  : erika-serv [action] [service]\n"
       printf ":: Action : [s]tatus, [e]nable, [d]isable, star[t], sto[p]\n" 
       printf ":: Help   : Try passing s, e, d, t, or p instead"
       return
@@ -83,7 +83,7 @@ def rik-serv [action: string, service: string] {
   }
 }
 
-def rik-wifi [action: string, ssid?: string] {
+def erika-wifi [action: string, ssid?: string] {
   match $action {
     "c" => {
       if ($ssid == null) {
@@ -97,7 +97,7 @@ def rik-wifi [action: string, ssid?: string] {
     "r" => { nmcli device wifi rescan },
     _ => {
       printf ":: Error  : Unknown [action]: '%s'\n" $action
-      printf ":: Usage  : rik-wifi [action] [ssid?]\n"
+      printf ":: Usage  : erika-wifi [action] [ssid?]\n"
       printf ":: Action : [c]onnect, [l]ist, [r]escan\n" 
       printf ":: Help   : Try passing c, l, or r instead"
       return
@@ -111,22 +111,22 @@ def dconfsync [] {
     return
   } else {
     cd ($env.HOME)/Projects/dconfsync/
-    nu dconfsync
+    just sync
     cd -
   }
 }
 
-alias a = rik-serv
+alias a = erika-serv
 alias c = clear
 alias d = rm -rf
 alias g = grep --color
-alias i = rik-install
+alias i = erika-install
 alias l = ls -la
-alias q = rik-query
-alias r = rik-remove
-alias s = rik-sync
+alias q = erika-query
+alias r = erika-remove
+alias s = erika-sync
 alias v = nvim
-alias w = rik-wifi
+alias w = erika-wifi
 alias x = exit
 alias cn = config nu
 alias ce = config env

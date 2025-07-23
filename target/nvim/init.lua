@@ -20,4 +20,18 @@ if not pcall(require, "lazy") then
   vim.cmd.quit()
 end
 
+vim.keymap.set("n", "<C-Tab>", function()
+  local buffers = vim.fn.getbufinfo({ buflisted = 1 })
+  if #buffers > 1 then
+    vim.cmd("bnext")
+  end
+end, { noremap = true, silent = true })
+
+vim.keymap.set("n", "<C-S-Tab>", function()
+  local buffers = vim.fn.getbufinfo({ buflisted = 1 })
+  if #buffers > 1 then
+    vim.cmd("bprev")
+  end
+end, { noremap = true, silent = true })
+
 require "lazy_setup"
