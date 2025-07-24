@@ -5022,3 +5022,5 @@ rm -rf .irssi/
 irssi
 exit
 dconfsync
+clear
+w c "Toko Manisan Uni Tina"

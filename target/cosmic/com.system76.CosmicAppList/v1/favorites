@@ -1,9 +1,7 @@
 [
+    "google-chrome",
     "zen",
+    "spotify",
     "discord",
     "org.telegram.desktop",
-    "spotify",
-    "org.wezfurlong.wezterm",
-    "com.system76.CosmicFiles",
-    "com.system76.CosmicSettings",
 ]
