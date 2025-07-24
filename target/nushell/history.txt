@@ -5021,3 +5021,4 @@ irssi
 rm -rf .irssi/
 irssi
 exit
+dconfsync
