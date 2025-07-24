@@ -4764,3 +4764,260 @@ mv dconfsync dconfsync.nu
 mv dconfcopy dconfcopy.nu
 ls
 nvim justfile
+just sync
+cd
+cd /etc/pacman.d/
+ls
+cd hooks/
+ls
+cd ..
+ls
+cd ..
+ls 
+ls | grep pacman
+cd
+cd /var/lib/pacman/sync/
+ls
+sudo rm -rf *
+cd
+sudo pacman -Syyu
+sudo pacman -S flatpak
+sudo pacman-key --refresh-keys<\n>
+reboot
+sudo pacman -Syyuu
+sudo pacman -S flatpak
+sudo pacman -Scc
+ls
+rm -rf gnupg/
+sudo rm -rf gnupg/
+cd
+c
+sudo pacman-db-upgrade 
+sudo pacman-key --help
+sudo pacman-key -u
+sudo rm -rf /usr/share/pacman/keyrings/
+sudo pacman-key --init --populate --updatedb --refresh-keys<\n>
+sudo pacman-key --init --populate
+sudo pacman-key --init
+sudo pacman-key --populate
+sudo pacman-key --init
+sudo pacman-key --populate
+sudo pacman-key --refresh-keys<\n>
+sudo pacman-key --populate
+sudo pacman-key --init
+sudo pacman-key --populate
+sudo pacman-key --refresh-keys<\n>
+sudo pacman-key --updatedb<\n>
+pacman-key --help
+pacman-key -l
+sudo pacman-key --populate
+sudo pacman -Sy archlinux-keyring<\n>
+cd Downloads/
+sudo pacman -U archlinux-keyring-20250716-1-any.pkg.tar.zst
+sudo pacman-key --populate
+sudo pacman-key --updatedb<\n>
+sudo pacman-key --populate archlinux
+sudo pacman-key --populate chaotic<\n>
+sudo pacman-key --recv-key 3056513887B78AEB --keyserver keyserver.ubuntu.com<\n>sudo pacman-key --lsign-key 3056513887B78AEB
+sudo pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst'<\n>sudo pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst'
+sudo pacman -Syyuu
+paru -Syu
+sudo pacman -S flatpak
+man 5 pacman-key
+man 5 pacman
+man 5 pacman.conf
+sudo nvim /etc/pacman.conf
+sudo pacman-key --init
+sudo pacman-key --populate chaotic<\n>
+sudo pacman-key --recv-key 3056513887B78AEB --keyserver keyserver.ubuntu.com<\n>sudo pacman-key --lsign-key 3056513887B78AEB
+sudo pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst'<\n>sudo pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst'
+sudo pacman-key --populate chaotic<\n>
+sudo pacman-key --populate archlinux
+sudo pacman -Syu
+sudo pacman -S flatpak
+flatpak list
+s
+flatpak --repair
+flatpak --help
+flatpak repair
+flatpak update
+flatpak uninstall --all
+flatpak install com.toolstack.Folio de.hackerfelix.Fragments de.hackerfelix.Shortwave io.github.mrvladus.List io.gitlab.adhami3310.Impression
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+flatpak install com.toolstack.Folio de.hackerfelix.Fragments de.hackerfelix.Shortwave io.github.mrvladus.List io.gitlab.adhami3310.Impression
+flatpak remote-delete flathub<\n>flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo<\n>flatpak update<\n>
+flatpak remote-delete flathub<\n>flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo<\n>flatpak update
+gnupg
+sudo pacma -S gnupg
+sudo pacman -S gnupg
+sudo flatpak repair --system<\n>rm -rf ~/.local/share/flatpak/repo/flathub.trustedkeys.gpg<\n>rm -rf ~/.local/share/flatpak/remote-cache<\n>flatpak update --user<\n>
+flatpak install com.toolstack.Folio de.hackerfelix.Fragments de.hackerfelix.Shortwave io.github.mrvladus.List io.gitlab.adhami3310.Impression
+sudo flatpak repair --system<\n>rm -rf ~/.local/share/flatpak/repo/flathub.trustedkeys.gpg<\n>rm -rf ~/.local/share/flatpak/remote-cache<\n>flatpak update --user<\n>
+flatpak remote-delete flathub<\n>flatpak remote-add flathub https://dl.flathub.org/repo/flathub.flatpakrepo<\n>flatpak update<\n>
+flatpak --verbose update<\n>
+flatpak
+flatpak --list
+flatpak list
+flatpak help
+flatpak --help
+clear
+sudo pacman -Syu
+w c Vicuna
+c
+s
+w c "Toko Manisan Uni Tina"
+paru -Ss trading-view
+paru -Ss trading
+paru -Ss tradingview
+paru -S tradingview
+tradingview
+sudo pacman -S xserver
+sudo pacman -S xorg-xserver
+sudo pacman -S xorg-server
+tradingview
+sudo pacman -Rns xorg-server
+l
+sudo nvim /usr/share/applications/tradingview.desktop
+w c Vicuna
+cd Projects/data
+cd
+ls
+cd Projects/data
+ls
+cd recovery/2fa-backup/farhnkrnapratma/
+ls
+rm -rf EpicGames/ Twitch/ TikTok/ Termius/ Steam/ Signal/ Patreon/ Obsidian/ ONLYOFFICE/ Nextcloud/ Mastodon.social/ HTB/ Grammarly/ Figma/
+ls
+mkdir Matric
+mv Matric Matrix
+cd Matrix/
+nvim recovery_key.txt
+z data
+ls
+cd recovery/2fa-backup/farhnkrnapratma/
+nvim Matrix/recovery_key.txt
+cd Matrix/
+rm -rf recovery_key.txt
+nvim recovery_key.txt
+z data
+pacman -Ss pacman
+flatpak update
+flatpak install com.toolstack.Folio de.hackerfelix.Fragments de.hackerfelix.Shortwave io.github.mrvladus.List io.gitlab.adhami3310.Impression
+flatpak install folio de.hackerfelix.Fragments de.hackerfelix.Shortwave io.github.mrvladus.List io.gitlab.adhami3310.Impression
+flatpak install Folio de.hackerfelix.Fragments de.hackerfelix.Shortwave io.github.mrvladus.List io.gitlab.adhami3310.Impression
+flatpak install de.hackerfelix.Fragments de.hackerfelix.Shortwave io.github.mrvladus.List io.gitlab.adhami3310.Impression
+snap refresh
+sudo pacman -Syyuu
+pacman -Ss firacodenerdfont
+pacman -Ss firacode
+sudo pacman -Rns qutebrowser
+rm -rf ~/.config/qutebrowser/ ~/.cache/qutebrowser/ ~/.local/share/qutebrowser/
+l
+git status
+git add .
+git status
+git add .
+git commit -m "Add and remove credentials"
+git push
+clear
+cd
+clea
+clear
+paru -Syu
+pkill vlc
+clear
+exit
+sudo pacman -S irssi
+irssi
+sudo pacma -Rns irssi
+sudo pacman -Rns irssi
+sudo pacman -S irssi
+irssi
+sudo pacman -S oidentd
+sudo systemctl status oidentd
+sudo systemctl status identd
+sudo systemctl status identdls
+ls
+l
+cd .irssi/
+ls
+nvim config
+nvim default.theme
+irssi
+nvim .oidentd.conf
+sudo ln -s /etc/sv/oidentd /var/service/
+sudo systemctl enable --now oidentd
+sudo pacman -Rns oidentd
+sudo pacman -Scc oidentd
+sudo pacman -S oidentd
+sudo systemctl enable --now oidentd
+sudo systemctl enable --now identd
+sudo systemctl enable --now oidentd
+irssi
+systemctl enable --now oidentd
+sudo pacman -Rnsd oidentd
+paru -Ss oidentd
+paru -S oidentd
+systemctl enable --now oidentd.socket
+systemctl status oidentd.socket
+irssi
+sudo ss -lnpt | grep :113<\n>
+cd
+nvim .oidentd.conf
+cd .irssi/
+l
+mv .oidentd.conf ~/
+c
+cd
+nvim .oidentd.conf
+irssi
+ls
+l
+nvim .oidentd.conf
+rm -rf .oidentd.conf
+sudo nvim /etc/oidentd.conf
+irssi
+sudo nvim /etc/oidentd.conf
+hostname
+sudo nvim /etc/resolv.conf
+sudo nvim /etc/hosts
+sudo nvim /etc/host.conf
+sudo nvim /etc/hostname
+sudo pacman -S inetutils
+hostname
+exit
+hostname
+sudo nvim /etc/resolv.conf
+irssi
+rm -rf .irssi/
+nvim .config/wezterm/wezterm.lua
+irssi
+rm -rf .irssi/
+ls
+l
+sudoo pacman -Rns oidentd
+sudo pacman -Rns oidentd
+sudo systemctl status oidentd
+sudo systemctl status oidentd.socke
+sudo systemctl status oidentd.socket
+irssi
+rm -rf .irssi/
+irssi
+nslookup
+sudo pacman -S nslookup
+nvim .oidentd.conf
+irssi --help
+irssi --connect=liberachat --password=3349562106447892 -n farhnkrnapratma -h Hanz
+irssi --c liberachat -n farhnkrnapratma -h Hanz
+irssi -c liberachat -n farhnkrnapratma -h Hanz
+irssi -c liberachat -h Hanz
+irssi -c liberachat
+irssi -n farhnkrnapratma -h Hanz
+irssi
+sudo pacman -Rns irssi
+sudo pacman -S irssi
+sudo pacman -S perl-lwp-protocol-https
+irssi
+rm -rf .irssi/
+irssi
+exit

@@ -11,7 +11,7 @@ return {
     saturation = 1,
     brightness = 1,
   },
-  window_background_opacity = 0.9,
+  window_background_opacity = 0.7,
   default_cursor_style = 'BlinkingUnderline',
   cursor_blink_rate = 200,
   cursor_thickness = 1,
