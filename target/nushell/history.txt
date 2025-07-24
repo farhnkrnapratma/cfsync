@@ -5024,3 +5024,208 @@ exit
 dconfsync
 clear
 w c "Toko Manisan Uni Tina"
+dconfsync
+sudo pacman -S ttf-ubuntu-nerdfont
+sudo pacman -S ttf-ubuntu-nerdfonts
+sudo pacman -Ss ubuntu-mono
+sudo pacman -Ss ttf-ubuntu-mono-nerd ttf-ubuntu-nerd
+sudo pacman -S ttf-ubuntu-mono-nerd ttf-ubuntu-nerd
+nvim .config/wezterm/wezterm.lua
+sudo pacman -Rns ttf-ubuntu-mono-nerd ttf-ubuntu-nerd
+nvim .config/wezterm/wezterm.lua
+clear
+sudo pacman -Rns ttf-jetbrains-mono-nerd
+sudo pacman -Rns ttf-jetbrainsmono-nerd
+sudo pacman -S ttf-jetbrainsmono-nerd
+sudo pacman -S ttf-jetbrains-mono-nerd
+nvim .config/wezterm/wezterm.lua
+clear
+htop
+nvim .config/wezterm/wezterm.lua
+fastfetch 
+clear
+neofetch
+sudo pacman -S neofetch
+neofetch
+clear
+neofetch
+c
+neofetch
+c
+neofetch
+c
+neofetch
+c
+neofetch
+c
+neofetch
+c
+neofetch
+c
+neofetch
+c
+neofetch
+sudo pacman -Rns warp-terminal
+rm -rf .config/warp-terminal/ .cache/warp-terminal/ .local/share/warp-terminal/
+ls
+l
+rm -rf .var/
+rm -rf .oidentd.conf
+c
+du
+c
+clear
+ls
+clear
+ls
+clear
+ls
+cd Projects/
+ls
+rm -rf dwm
+ls
+cd
+cd Projects/
+cd farhnkrnapratma/
+git pull
+ls
+nvim Dockerfile
+clear
+cd
+l
+paru -Rns archlinux-keyring
+paru -Rnsdd archlinux-keyring chaotic-keyring
+sudo pacman -S archlinux-keyring
+sudo pacman -Scc
+paru -Scc
+clear
+sudo rm -rf /usr/share/pacman/keyrings/
+sudo rm -rf /etc/pacman.d/gnupg
+sudo rm -rf /etc/pacman.d/*
+sudo rm -rf /var/cache/pacman/pkg/
+sudo pacman -Syyuu
+paru -Syu
+sudo nvim /etc/pacman.d/mirrorlist
+sudo pacman -Syyuu
+sudo pacman-key --recv-key 3056513887B78AEB --keyserver keyserver.ubuntu.com<\n>sudo pacman-key --lsign-key 3056513887B78AEB
+sudo pacman-key --init
+sudo pacman-key --recv-key 3056513887B78AEB --keyserver keyserver.ubuntu.com<\n>sudo pacman-key --lsign-key 3056513887B78AEB
+sudo pacman-key --populate archlinux
+sudo pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst'<\n>sudo pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst'
+sudo nvim /etc/pacman.conf
+w c Vicuna
+w r
+w c Vicuna
+sudo pacman -Syyuu
+sudo pacman-key --recv-key 3056513887B78AEB --keyserver keyserver.ubuntu.com<\n>sudo pacman-key --lsign-key 3056513887B78AEB
+sudo pacman-key --init
+sudo pacman-key --populate archlinux
+sudo pacman-key --help
+sudo pacman-key --updatedb<\n>
+sudo pacman-key --refresh-keys<\n>
+sudo pacman -S archlinux-keyring
+sudo pacman-key --refresh-keys
+su
+sudo pacman -Syyuu
+sudo pacman-key --recv-key 3056513887B78AEB --keyserver keyserver.ubuntu.com<\n>sudo pacman-key --lsign-key 3056513887B78AEB
+sudo pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst'<\n>sudo pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst'
+nvim /etc/pacman.conf
+sudo nvim /etc/pacman.conf
+sudo pacman -Syu
+sudo nvim /etc/pacman.conf
+sudo pacman -Syu
+sudo pacman -S zellij
+sudo pacman -Syyuu
+sudo pacman-key populate
+sudo pacman-key --populate
+timedatectl status<\n>
+timedatectl --help
+timedatectl show
+hwclock --help
+hwclock --systohc
+hwclock --systohc --verbose
+sudo hwclock --systohc --verbose
+sudo hwclock --systohc --verbose --update-drift
+spotify 
+pkill spotify
+sudo pacman -Rns spotify
+sudo pacman -S spotify
+paru -Ss spotify
+paru -Ss spotify | grep spotify
+paru -Ss spotify | g /spotify
+paru -S chaotic-aur/spotify-qt chaotic-aur/spotify-adblock-git
+pacman -S --help
+su
+sudo pacman-key --populate archlinux
+sudo pacman-key --populate chaotic<\n>
+sudo pacman-key --help
+paru -S chaotic-aur/spotify-qt chaotic-aur/spotify-adblock-git --disable-download-timeout
+sudo nvim /etc/pacman.conf
+paru -S chaotic-aur/spotify-qt chaotic-aur/spotify-adblock-git --disable-download-timeout
+sudo pacman -S zenity
+sudo pacman -S ffmpeg
+sudo pacman -S ffmpeg4.4
+c
+spotify 
+spotify --help
+spotify --username=farhnkrnapratma --password=3349562106@FarhanKP
+spotify --show-console
+spotify --debug-level=MAX
+spotify --version
+sudo nvim /usr/share/applications/spotify.desktop
+/usr/share/applications/spotify.desktop
+/bin/spotify
+/bin/spotify --help
+/bin/spotify
+sudo pacman -Rns spotify-qt
+sudo pacman-key --refresh-keys --verbose
+spotify
+journalctl
+journalctl | grep spotify
+sudo systemctl stop apparmor
+sudo systemctl status apparmor
+sudo systemctl disable apparmor
+sudo systemctl status apparmor
+bash
+c
+sudo pacman -Rns spotify ffmpeg4.4 zenity
+sudo pacman -Rnsdd spotify ffmpeg4.4 zenity spotify-adblock-git
+clear
+sudo pacman -S archlinux-keyring
+sudo nvim /etc/pacman.conf
+sudo pacman -S archlinux-keyring
+sudo nvim /etc/pacman.conf
+clear
+exit
+sudo pacman -Rns apparmor
+sudo nvim /boot/EFI/limine/limine.conf
+sudo mkinitcpio -g 6.15.6-1.1-cachyos
+nvim
+ls
+l
+rm -rf 6.15.6-1.1-cachyos
+discord 
+discord --ozone=Wayland
+bat /usr/share/applications/tradingview.desktop
+discord --ozone-platform=wayland --enable-features=UseOzonePlatform
+sudo pacman -S xwayland
+sudo pacman -S x0rg-xwayland
+sudo pacman -S xorg-xwayland
+discord
+sudo pacman -S xorg-xserver
+sudo pacman -S xorg-server
+dis
+discord
+sudo nvim /usr/share/applications/discord.desktop
+w c "Toko Manisan Uni Tina"
+betterdiscord-installer 
+bat /usr/share/applications/tradingview.desktop
+betterdiscord-installer --ozone-platform=wayland --enable-features=UseOzonePlatform
+sudo pacman -S discord-ptb
+sudo nvim /usr/share/applications/discord-ptb.desktop
+sudo pacman -Rns discord betterdiscord-installer
+sudo pacman -Rns discord betterdiscord-installer-bin
+rm -rf `.config/BetterDiscord Installer/` .config/discord
+exit
+w c Vicuna
+w c "Toko Manisan Uni Tina"

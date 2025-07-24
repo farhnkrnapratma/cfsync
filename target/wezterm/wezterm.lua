@@ -4,7 +4,7 @@ return {
   default_prog = { '/usr/bin/nu' },
   scrollback_lines = 50000,
   enable_scroll_bar = false,
-  font = wz.font 'FiraCode Nerd Font Mono',
+  font = wz.font 'JetBrainsMono Nerd Font Mono',
   font_size = 11,
   color_scheme = 'Catppuccin Mocha',
   inactive_pane_hsb = {
