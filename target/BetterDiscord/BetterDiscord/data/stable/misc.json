@@ -1,0 +1,10 @@
+{
+    "version": "1.12.5",
+    "drawerStates": {
+        "settings": {
+            "addons": true,
+            "store": true,
+            "editor": true
+        }
+    }
+}

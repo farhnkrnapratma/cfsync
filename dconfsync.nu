@@ -1,7 +1,7 @@
 #!/bin/nu
 
 let srcf = $env.cfg
-let dsts = ["starship.toml" "wezterm/" "nvim/" "nushell/" "cosmic/" "BetterDiscord/"] 
+let dsts = ["starship.toml" "wezterm" "nvim" "nushell" "cosmic" "BetterDiscord"] 
 
 print "\n :: RSYNC\n"
 
@@ -9,7 +9,7 @@ for $dst in $dsts {
   let fpath = ($srcf | path join $dst)
   let target = ("target/" | path join $dst)
   printf " :: Syncing folder '%s' with '%s'...\n\n" $fpath $target
-  rsync -av --delete $fpath $target
+  rsync -aPvh --partial --delete $fpath $target
   print "\n :: Done.\n"
 }
 

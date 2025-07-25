@@ -179,7 +179,7 @@ format = "[[ $duration ](fg:yellow bold)]($style)"
 style = "fg:lavender"
 disabled = false
 show_notifications = true
-min_time_to_notify = 20000
+min_time_to_notify = 60000
 
 [palettes.catppuccin_mocha]
 rosewater = "#f5e0dc"

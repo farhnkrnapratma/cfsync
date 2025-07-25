@@ -1,0 +1,32 @@
+{
+    (
+        modifiers: [
+            Super,
+        ],
+        key: "p",
+        description: Some("Settings"),
+    ): Spawn("cosmic-settings"),
+    (
+        modifiers: [
+            Super,
+            Shift,
+        ],
+        key: "s",
+    ): System(Screenshot),
+    (
+        modifiers: [
+            Super,
+            Shift,
+        ],
+        key: "m",
+    ): Minimize,
+    (
+        modifiers: [],
+        key: "Print",
+    ): Disable,
+    (
+        modifiers: [],
+        key: "XF86PowerOff",
+        description: Some("Shutdown"),
+    ): Spawn("cosmic-osd shutdown"),
+}

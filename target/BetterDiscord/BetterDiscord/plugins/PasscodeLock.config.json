@@ -1,0 +1,22 @@
+{
+    "hasShownAttention": true,
+    "currentVersionInfo": {
+        "version": "1.5.5",
+        "hasShownChangelog": true
+    },
+    "settings": {
+        "codeType": "6-digit",
+        "hash": "bee91c34aa441a7ba6817862b506c290e7af657b",
+        "salt": "2d90d5dd646787db83d2d53fc6b5b658587464a5bb8c3977549e872e2ed0cad3",
+        "iterations": 4000,
+        "autolock": 300,
+        "keybind": "control+l",
+        "highlightButtons": false,
+        "lockOnStartup": true,
+        "hideNotifications": false
+    },
+    "attempts": 0,
+    "delayUntil": null,
+    "locked": false,
+    "autoDeafened": false
+}
