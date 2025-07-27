@@ -5245,3 +5245,70 @@ exit
 nvim Projects/archsync/archsync.nu
 nvim Projects/archsync/dconfsync.nu
 nvim Projects/dconfsync/dconfsync.nu
+dconfsync
+z Projects/dconfsync/
+ls
+cd target/
+ls
+cd nvim/
+ls
+cd ..
+ls
+clear
+paru -Syu
+w c Vicuna
+w r
+w l
+w c Vicuna
+paru -Syu
+w c "Toko Manisan Uni Tina"
+w l
+w c "Toko Manisan Uni Tina"
+pacman -Ss xbps
+paru -Ss xbps
+w c Vicuna
+paru -Ss xbps
+w c Vicuna
+w r
+w c Vicuna
+w r
+w l
+w c Vicuna
+w c "Toko Manisan Uni Tina"
+paru -Syu
+paru -Ss xbps
+snap search spotify-adblock
+snap search spotify
+snap install calaboka
+sudo systemctl status experimental.user-daemons
+sudo systemctl status experimental.user-daemons.socket
+sudo systemctl status experimental.user-daemons
+systemctl status experimental.user-daemons
+cd /snap
+ls
+cd ..
+ls
+cd usr/
+ls
+cd share/
+ls
+cd snapd/
+ls
+cd
+cd /
+ls
+cd etc/
+ls
+bootctl
+od --address-radix=n --format=u1 /sys/firmware/efi/efivars/SecureBoot-8be4df61-93ca-11d2-aa0d-00e098032b8c
+journalctl -kg 'secure boot'
+cat /sys/firmware/efi/fw_platform_size
+fastfetch 
+reboot
+fastfetch 
+sudo systemctl disable cosmic-greeter
+fastfetch 
+pacman -Ss binace
+paru -Ss binance
+paru -S binance
+fastfetch 
