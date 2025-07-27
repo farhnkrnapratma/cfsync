@@ -5426,3 +5426,9 @@ cd
 cd Projects/dconfsync/
 ls
 cd
+dconfsync 
+cd .config/nvim/
+l
+rm -rf .git .github/ .gitignore LICENSE README.md
+l
+cd
