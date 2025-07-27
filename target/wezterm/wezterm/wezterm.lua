@@ -4,7 +4,7 @@ return {
   default_prog = { '/usr/bin/nu' },
   scrollback_lines = 50000,
   enable_scroll_bar = false,
-  font = wz.font 'JetBrainsMono Nerd Font Mono',
+  font = wz.font 'JetBrainsMono Nerd Font',
   font_size = 11,
   color_scheme = 'Catppuccin Mocha',
   inactive_pane_hsb = {
@@ -19,8 +19,8 @@ return {
   use_fancy_tab_bar = false,
   window_decorations = "NONE",
   window_padding = {
-    left = 8,
-    right = 2,
+    left = 0,
+    right = 0,
     top = 0,
     bottom = 0,
   },

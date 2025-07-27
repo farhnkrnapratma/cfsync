@@ -5312,3 +5312,117 @@ pacman -Ss binace
 paru -Ss binance
 paru -S binance
 fastfetch 
+dconfsync
+sudo pacman -S ripgrep gcc make
+clear
+rm -rf ~/.config/nvim<\n>rm -rf ~/.local/state/nvim<\n>rm -rf ~/.local/share/nvim
+git clone https://github.com/NvChad/starter ~/.config/nvim && nvim
+sudo pacman -S luarocks
+sudo pacman -S go
+sudo pacman -S wget
+wget
+exit
+git clone https://github.com/NvChad/starter ~/.config/nvim; nvim
+cd Projects/
+ls
+nvim
+cd
+v .config/wezterm/wezterm.lua
+v .config/starship.toml
+clear
+ls
+clear
+cd .config/nvim/
+ls
+l
+rm -rf .git
+l
+c
+l
+cd lua/plugins/
+l
+v init.lua
+nvim
+l
+nvim
+l
+v catppuccin.lua
+l
+v nvim-tree.lua
+rm -rf nvim-tree.lua
+v nvim-tree.lua
+clear
+l
+cd catppuccin.lua
+v catppuccin.lua
+cd ..
+ls
+cd configs/
+l
+cd ..
+v chadrc.lua
+l
+v options.lua
+v autocmds.lua
+cd ..
+l
+rm -rf README.md
+rm -rf LICENSE
+l
+v init.lua
+l
+cd lua/
+l
+rm -rf chadrc.lua
+nvim
+l
+v
+l
+cd options.lua
+v options.lua
+v mappings.lua
+v autocmds.lua
+cd plugins/
+l
+cd catppuccin.lua
+v catppuccin.lua
+l
+v init.lua
+rm -rf ~/.config/nvim<\n>rm -rf ~/.local/state/nvim<\n>rm -rf ~/.local/share/nvim
+v .config/wezterm/wezterm.lua
+v
+git clone https://github.com/NvChad/starter ~/.config/nvim && nvim
+nvim
+rm -rf ~/.config/nvim<\n>rm -rf ~/.local/state/nvim<\n>rm -rf ~/.local/share/nvim
+git clone https://github.com/NvChad/starter ~/.config/nvim; nvim
+rm -rf ~/.config/nvim<\n>rm -rf ~/.local/state/nvim<\n>rm -rf ~/.local/share/nvim
+# Strongly recommended: Fork the repo and clone YOUR fork.<\n>git clone https://github.com/NormalNvim/NormalNvim.git ~/.config/nvim
+git clone --depth=1 https://github.com/NormalNvim/NormalNvim.git ~/.config/nvim
+nvim
+rm -rf ~/.config/nvim<\n>rm -rf ~/.local/state/nvim<\n>rm -rf ~/.local/share/nvim
+git clone https://github.com/NormalNvim/NormalNvim.git ~/.config/nvim
+paru -S --needed "luarocks" "python" "yazi" "fd" "git-delta" "grcov" "rustup" "yarn" "python-pytest" "gcc" "binutils" "dotnet-runtime" "dotnet-sdk" "aspnet-runtime" "mono" "jdk-openjdk" "dart" "kotlin" "elixir" "npm" "nodejs" "typescript" "make" "go" "nasm" "r" "nuitka" "python" "ruby" "perl" "lua" "pyinstaller" "swift-bin" "gcc-fortran" "fortran-fpm-bin" "doxygen" "ldoc" "ruby-yard"; yarn global add "jest" "jsdoc" "typedoc"; cargo install "cargo-nextest"; go install "golang.org/x/tools/cmd/godoc@latest"
+X
+nvim
+wayland-info
+sudo pacman -S nix
+sudo pacman -Syyuu
+sudo pacman -S nix
+sudo systemctl enable --now nix-daemon
+sudo systemctl status nix-daemon
+nix-channel --add https://nixos.org/channels/nixpkgs-unstable
+nix-channel --update
+sudo nvim /etc/nix/nix.conf
+sudo nix-channel --update
+nix-channel --update
+nix-channel --list
+nix-channel --update
+c
+nix-channel --update
+nvim
+c
+nvim
+cd
+cd Projects/dconfsync/
+ls
+cd
