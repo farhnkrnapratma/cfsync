@@ -5572,3 +5572,320 @@ l
 rm -rf .bash_history
 l
 cn
+dconfsync
+z Projects/
+l
+cd dconfsync/
+l
+bat dconfsync
+c
+l
+cd ..
+l
+z Projects/
+l
+mkdir xrals
+l
+cd xrals/
+l
+v .editorconfig
+l
+v
+c
+v .
+c
+v
+l
+v .editorconfig
+touch justfile
+;
+l
+v
+bash --help
+bash -c --help
+bash -c help
+c
+bash --help
+c
+v justfile
+bash -ce
+v justfile
+bash -e
+exit
+z xrals
+l
+v
+just test
+v
+just test
+v
+just test
+v
+just test
+l
+clear
+c\
+clear
+l
+clear
+c
+clear
+v
+l
+clear
+l
+c
+l
+touch xrals.toml
+if ($env.EUID | into int) != 0 {<\n>    print "Script ini harus dijalankan sebagai root!"<\n>    exit 1<\n>}<\n><\n>print "Berjalan sebagai root..."<\n>
+if ($env.UUID | into int) != 0 {<\n>    print "Script ini harus dijalankan sebagai root!"<\n>    exit 1<\n>}<\n><\n>print "Berjalan sebagai root..."
+if ($env.UID | into int) != 0 {<\n>    print "Script ini harus dijalankan sebagai root!"<\n>    exit 1<\n>}<\n><\n>print "Berjalan sebagai root..."
+echo $env
+id -u
+let uid = (id -u | into int)<\n><\n>if $uid != 0 {<\n>    print "Script ini harus dijalankan sebagai root!"<\n>}<\n><\n>print "Berjalan sebagai root..."
+l
+z xrals
+c
+l
+v test.nu
+chmod +x test.nu
+./test.nu
+sudo ./test.nu
+v test.nu
+sudo ./test.nu
+sudo ./test.nu --nodeps
+sudo pacman -S bpf<\n>
+sudo pacman -Syu --ignore binutils<\n>
+sudo ./test.nu --ignore binutils
+sudo pacman -Syu --ignore binutils<\n>
+clear
+l
+clear
+l
+v xrals.toml
+paru --help
+bat /etc/locale.conf
+z nvim
+l
+v init.lua
+rg "vim.opt.number" .
+cd lua/base/
+v 1-options.lua
+groups root
+groups farhn
+groups
+groups -l
+groups --help
+c
+bat /etc/passwd
+b2sum
+b2sum --help
+cd Projects/
+l
+clear
+ls
+v passwd.txt
+b2sum passwd.txt
+ls
+v passwd.txt.b2
+b2sum passwd.txt.b2
+b2sum -c passwd.txt.b2
+z xrals
+l
+clear
+v xrals.toml
+cd ..
+ls
+b2sum -c passwd.txt.b2
+v passwd.txt.b2
+b2sum passwd.txt
+v passwd.txt.b2
+b2sum passwd.txt > passwd.txt.b2
+b2sum passwd.txt >> passwd.txt.b2
+b2sum passwd.txt | passwd.txt.b2
+b2sum passwd.txt | save passwd.txt.b2
+b2sum passwd.txt | save --force passwd.txt.b2
+b2sum -c passwd.txt.b2
+ls
+rm -rf passwd*
+l
+clear
+ls
+bat /etc/shadow
+sudo bat /etc/shadow
+grep "$USER" /etc/shadow
+sudo grep "$USER" /etc/shadow
+sudo grep "$env.USER" /etc/shadow
+sudo grep $env.USER /etc/shadow
+mkpasswd
+sudo pacman -S whois
+mkpasswd
+mkpasswd -c yescrypt
+mkpasswd -m yescrypt
+sudo grep $env.USER /etc/shadow
+free -h
+sudo bat /etc/shadow
+usermod --help
+cd xrals/
+l
+clear
+l
+bat test.nu
+c
+ls
+c
+l
+rm -rf test.nu
+l
+clear
+l
+mkpasswd -m yescrypt
+paru -Q --help
+paru -Qm
+pacman -Qm
+pacman -Ss tradingview
+paru -Ss tradingview
+snap list
+flatpak
+flatpak --list
+v xrals.toml
+pacman -Ss just
+pacman -Ss justfile
+pacman -Ss just | grep command
+pacman -Ss just | grep just
+pacman -Ss just | grep extra/just
+sudo pacman -S just-lsp
+c
+l
+v xrals.toml
+cd /usr/share/applications/
+ls | grep hardware
+ls | grep loc
+ls
+rm -rf lstopo.desktop
+sudo rm -rf lstopo.desktop
+cd -
+c
+l
+v xrals.toml
+paru -S toml2json
+toml2json xrals.toml > xrals.json
+toml2json xrals.toml xrals.json
+l
+toml2json --help
+toml2json xrals.toml
+toml2json -p xrals.toml
+l
+toml2json -p xrals.toml
+toml2json --help
+toml2json -p xrals.toml
+c
+flatpak install folio
+v xrals.toml
+l
+mkdir src
+cd src
+l
+mkdir xrals-build
+mkdir xrals-rollback
+mkdir xrals-sync
+mkdir xrals-cache
+ls
+rm -rf xrals-cache/
+ls
+mkdir xrals-generate-config
+mkdir xrals-option
+mv xrals-build/ xrals-rebuild
+ls
+mkdir xrals-package
+ls
+mv xrals-generate-config/ xrals-config/
+ls
+c
+ls
+mkdir xrals-state
+ls
+c
+l
+c
+ls
+rm -rf xrals-config/
+ls
+rm -rf xrals-option/
+ls
+c
+ls
+mv xrals-rebuild/ xrals-build
+ls
+mv xrals-rollback/ xrals-roll
+ls
+mv xrals-package/ xrals-search
+c
+ls
+mkdir xrals-diff
+ls
+mv xrals-state/ xrals-current
+ls
+mv xrals-current xrals-state
+ls
+clear
+ls
+pacman -Qq
+pacman -Qent
+pacman -Qe
+diff
+diff --help
+cd ..
+pacman -Qe | save all.txt
+ls
+bat all.txt
+pacman -Qent | save all.txt
+pacman -Qent | save off.txt
+ls
+diff all.txt off.txt
+diff off.txt all.txt
+c
+diff off.txt all.txt
+diff off.txt all.txt --color
+diff all.txt off.txt --color
+pacman -Qm
+pacman -Qe
+pacman -Qent
+pacman -Qnt
+pacman -Q --help
+pacman -Qt
+pacman -Qtt
+sudo pacman -Rns (pacman -Qdtq)
+aura
+yay
+c
+;
+clear
+ls
+rm -rf all.txt off.txt
+ls
+c
+ls
+bat xrals.toml
+v xrals.toml
+z xrals
+l
+mv src/* .
+l
+rm -rf src/
+l
+clear
+l
+mkdir ldd
+ls
+rm -rf ldd
+ls
+ldd
+clear
+ldd --help
+clear
+ls
+mkdir bin
+ls
+git init
+l
