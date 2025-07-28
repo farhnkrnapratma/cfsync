@@ -6,7 +6,7 @@ def erika-install [source: string, ...packages: string] {
     _ => {
       printf ":: Error  : Unknown [source]: '%s'\n" $source
       printf ":: Usage  : erika-install [source] [...packages]\n"
-      printf ":: Source : [a]rch, [s]nap, [f]lathub\n" 
+      printf ":: Source : [a]rch, [s]nap, [f]lathub\n"
       printf ":: Help   : Try passing a, s, or f instead"
       return
     }
@@ -21,7 +21,7 @@ def erika-query [source: string, package: string] {
     _ => {
       printf ":: Error  : Unknown [source]: '%s'\n" $source
       printf ":: Usage  : erika-query [source] [package]\n"
-      printf ":: Source : [a]rch, [s]nap, [f]lathub\n" 
+      printf ":: Source : [a]rch, [s]nap, [f]lathub\n"
       printf ":: Help   : Try passing a, s, or f instead"
       return
     }
@@ -36,7 +36,7 @@ def erika-remove [source: string, ...packages: string] {
     _ => {
       printf ":: Error  : Unknown [source]: '%s'\n" $source
       printf ":: Usage  : erika-remove [source] [...packages]\n"
-      printf ":: Source : [a]rch, [s]nap, [f]lathub\n" 
+      printf ":: Source : [a]rch, [s]nap, [f]lathub\n"
       printf ":: Help   : Try passing a, s, or f instead"
       return
     }
@@ -56,7 +56,7 @@ def erika-sync [source?: string] {
     _ => {
       printf ":: Error  : Unknown [source]: '%s'\n" $source
       printf ":: Usage  : erika-sync [source?]\n"
-      printf ":: Source : [a]rch, [s]nap, [f]lathub\n" 
+      printf ":: Source : [a]rch, [s]nap, [f]lathub\n"
       printf ":: Help   : Try passing a, s, or f instead"
       return
     }
@@ -76,7 +76,7 @@ def erika-serv [action: string, service: string] {
     _ => {
       printf ":: Error  : Unknown [action]: '%s'\n" $action
       printf ":: Usage  : erika-serv [action] [service]\n"
-      printf ":: Action : [s]tatus, [e]nable, [d]isable, star[t], sto[p]\n" 
+      printf ":: Action : [s]tatus, [e]nable, [d]isable, star[t], sto[p]\n"
       printf ":: Help   : Try passing s, e, d, t, or p instead"
       return
     }
@@ -98,7 +98,7 @@ def erika-wifi [action: string, ssid?: string] {
     _ => {
       printf ":: Error  : Unknown [action]: '%s'\n" $action
       printf ":: Usage  : erika-wifi [action] [ssid?]\n"
-      printf ":: Action : [c]onnect, [l]ist, [r]escan\n" 
+      printf ":: Action : [c]onnect, [l]ist, [r]escan\n"
       printf ":: Help   : Try passing c, l, or r instead"
       return
     }
@@ -107,7 +107,7 @@ def erika-wifi [action: string, ssid?: string] {
 
 def dconfsync [] {
   if (is-admin) {
-    print "You are not supposed to run this sync."
+    print "You are not supposed to run this."
     return
   } else {
     cd ($env.HOME)/Projects/dconfsync/
@@ -116,10 +116,21 @@ def dconfsync [] {
   }
 }
 
+def dconfcopy [] {
+  if (is-admin) {
+    print "You are not supposed to run this."
+    return
+  } else {
+    cd ($env.HOME)/Projects/dconfsync/
+    just copy
+    cd -
+  }
+}
+
 alias a = erika-serv
 alias c = clear
 alias d = rm -rf
-alias g = grep --color
+alias grep = grep --color=auto
 alias i = erika-install
 alias l = ls -la
 alias q = erika-query

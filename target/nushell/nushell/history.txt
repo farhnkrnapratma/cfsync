@@ -5541,3 +5541,34 @@ l
 cd ..
 v justfile
 cd
+dconfsync
+z Projects/
+l
+v
+cd
+cd .config/nvim/
+l
+cd lua/
+l
+cd base/
+l
+bat 1-options.lua | grep nvim-lspconfig
+bat 2-lazy.lua | grep nvim-lspconfig
+bat 3-autocmds.lua | grep nvim-lspconfig
+bat 4-mappings.lua | grep nvim-lspconfig
+bat 4-mappings.lua
+rg
+cd ../../
+rg --help
+rg "nvim-lspconfig" .
+cd lua/plugins/
+v 3-dev-core.lua
+v
+l
+v gruvbox.lua
+v
+cd
+l
+rm -rf .bash_history
+l
+cn
