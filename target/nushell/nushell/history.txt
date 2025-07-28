@@ -5432,3 +5432,112 @@ l
 rm -rf .git .github/ .gitignore LICENSE README.md
 l
 cd
+dconfsync 
+c
+exit
+c
+clear
+v .config/wezterm/wezterm.lua
+v .config/starship.toml
+clear
+c
+v .config/wezterm/wezterm.lua
+cd .config/nvim/ls
+cd .config/nvim/
+ls
+cd lua/
+cd plugins/
+;
+l
+ls
+nvim 2-ui.lua
+l
+v gruvbox.lua
+nvim
+v gruvbox.lua
+v 2-ui.lua
+v
+v gruvbox.lua
+v 2-ui.lua
+v gruvbox.lua
+v
+v 2-ui.lua
+rm -rf gruvbox.lua
+v gruvbox.lua
+v
+v gruvbox.lua
+c
+cd ..
+ls
+cd ..
+ls
+v init.lua
+cd lua/plugins/
+l
+v 1-base-behaviors.lua
+v gruvbox.lua
+v ../../init.lua
+v gruvbox.lua
+l
+cd ..
+l
+v lazy_snapshot.lua
+l
+cd base/
+l
+v 3-autocmds.lua
+v
+cd .
+cd ..
+l
+reboot
+fastfetch 
+paru -Ss cosmic
+paru -Ss cosmic | grep extension
+paru -S aur/cosmic-ext-forecast-git
+paru -S cosmic-ext-applet-weather
+paru -Ss cosmic-ext-applet-weather
+paru -Ss cosmic-ext-applet
+paru -Ss cosmic-ext-
+paru -Ss cosmic-ext- | grep weather
+paru -Ss cosmic-ext- | grep forecast
+paru -S cosmic-ext-applet-privacy-indicator cosmic-ext-applet-system-monitor-git
+paru -S cosmic-ext-applet-privacy-indicator cosmic-ext-applet-system-monitor-git libxkbcommon-dev
+paru -S cosmic-ext-applet-privacy-indicator cosmic-ext-applet-system-monitor-git libxkbcommon
+paru -S cosmic-ext-applet-privacy-indicator cosmic-ext-applet-system-monitor-git
+paru -Rns cosmic-ext-applet-privacy-indicator
+z Projects/
+l
+git clone https://github.com/cosmic-utils/cosmic-ext-applet-weather.git<\n>cd cosmic-ext-applet-weather<\n>just build<\n>sudo just install
+z
+z .config/cosmic/io.github.cosmic_utils.weather-applet/v1/
+l
+touch latitude
+touch longitude
+echo "-2.258862" > latitude
+l
+bat latitude
+v latitude
+c longitude
+v longitude
+paru -Ss cosmic-tweaks
+paru -Ss cosmic | grep tweaks
+paru -S cosmoc-ext-tweaks-git
+paru -S cosmic-ext-tweaks-git
+z Projects/
+l
+cd dconfsync/target/
+l
+cp cosmic ~/.config/
+cp -r cosmic ~/.config/
+cd .config/cosmic/io.github.cosmic_utils.weather-applet/v1/
+l
+bat longitude
+cd
+dconfsync
+cn
+z dconfsync/
+l
+cd ..
+v justfile
+cd

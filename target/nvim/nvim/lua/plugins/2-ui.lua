@@ -28,28 +28,28 @@ return {
 
   --  tokyonight [theme]
   --  https://github.com/folke/tokyonight.nvim
-  {
-    "folke/tokyonight.nvim",
-    event = "User LoadColorSchemes",
-    opts = {
-      dim_inactive = false,
-      styles = {
-        comments = { italic = true },
-        keywords = { italic = true },
-      },
-    }
-  },
+  -- {
+  --   "folke/tokyonight.nvim",
+  --   event = "User LoadColorSchemes",
+  --   opts = {
+  --     dim_inactive = false,
+  --     styles = {
+  --       comments = { italic = true },
+  --       keywords = { italic = true },
+  --     },
+  --   }
+  -- },
 
   --  astrotheme [theme]
   --  https://github.com/AstroNvim/astrotheme
-  {
-    "AstroNvim/astrotheme",
-    event = "User LoadColorSchemes",
-    opts = {
-      palette = "astrodark",
-      plugins = { ["dashboard-nvim"] = true },
-    },
-  },
+  -- {
+  --   "AstroNvim/astrotheme",
+  --   event = "User LoadColorSchemes",
+  --   opts = {
+  --     palette = "astrodark",
+  --     plugins = { ["dashboard-nvim"] = true },
+  --   },
+  -- },
 
   --  alpha-nvim [greeter]
   --  https://github.com/goolord/alpha-nvim
