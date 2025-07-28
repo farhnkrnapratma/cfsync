@@ -5889,3 +5889,114 @@ mkdir bin
 ls
 git init
 l
+dconfsync
+l
+cd .github/
+l
+bat FUNDING.yml
+cd -
+l
+git shortlog -sne
+c
+ls
+touch ./bin/xrals-rebuild
+touch ./bin/xrals-diff
+touch ./bin/xrals-rollback
+touch ./bin/xrals-search
+touch ./bin/xrals-state
+touch ./bin/xrals-sync
+touch ./bin/xrals-cache
+ls
+rm -rf xrals-*
+l
+cd bin
+ls
+touch xrals-config
+npm --help
+l
+clear
+l
+cd
+z xrals
+l
+cd bin/
+l
+ls | each { echo "#!/usr/bin/env nu" | save $in.name }
+ls ./xrals-* | each { echo "#!/usr/bin/env nu" | save $in.name }
+ls ./xrals-* | each { echo "#!/usr/bin/env nu" | save $in.name -f }
+ls | each { echo "#!/usr/bin/env nu" | save $in.name -f }
+ls | each { echo "#!/usr/bin/env nu" | save xrals-* }
+ls | each { echo "#!/usr/bin/env nu" | save xrals-* -f }
+l
+rm -rf 'xrals-*'
+l
+touch xrals
+l
+bat xrals-sync
+v
+ls
+mv xrals-* xrals-*.nu
+ls
+ls | each { mv $in.name ($in.name+".nu") }
+ls | each { mv $in.name ($in.name + ".nu") }
+l
+v
+print "#!/usr/bin/env nu" | tee { each { save *.nu }}
+nu -c "print '#!/usr/bin/env nu'" | tee { each { save *.nu }}
+l
+bat *.nu
+nu -c "print '#!/usr/bin/env nu\n\n# Copyright (c) 2025 Farhan Kurnia Pratama. All Rights Reserved.'" | tee { each { save ($in.name).nu }}
+nu -c "printf '#!/usr/bin/env nu\n\n# Copyright (c) 2025 Farhan Kurnia Pratama. All Rights Reserved.'" | tee { each { save ($in.name).nu }}
+ls
+rm -rf '*.nu'
+l
+bat xrals.nu
+ls *.nu | each { print '#!/usr/bin/env nu\n\n# Copyright (c) 2025 Farhan Kurnia Pratama. All Rights Reserved.' | save $in.name -f }
+ls
+bat xrals.nu
+ls | each { print '#!/usr/bin/env nu\n\n# Copyright (c) 2025 Farhan Kurnia Pratama. All Rights Reserved.' | save $in.name -f }
+ls | each { echo '#!/usr/bin/env nu\n\n# Copyright (c) 2025 Farhan Kurnia Pratama. All Rights Reserved.' | save $in.name -f }
+ls | each { printf '#!/usr/bin/env nu\n\n# Copyright (c) 2025 Farhan Kurnia Pratama. All Rights Reserved.' | save $in.name -f }
+ls
+ls | each { printf '#!/usr/bin/env nu\n\n# Copyright (c) 2025 Farhan Kurnia Pratama. All Rights Reserved.' | save $in.name -f }
+ls | each {<\n>    let content = """<\n>#!/usr/bin/env nu<\n><\n># Copyright (c) 2025 Farhan Kurnia Pratama. All Rights Reserved.<\n>"""<\n>    echo $content | save $in.name -f<\n>}<\n>
+ls | get name | each {<\n>    let content = """<\n>#!/usr/bin/env nu<\n><\n># Copyright (c) 2025 Farhan Kurnia Pratama. All Rights Reserved.<\n>"""<\n>    echo $content | save $in -f<\n>}<\n>
+ls
+bat xrals.nu
+bash
+c
+ls
+bat *.nu
+c
+l
+cd ..
+l
+ls ../
+mv xrals.toml ../
+ls
+l
+mv LICENSE.txt LICENSE
+l
+v
+l
+v README.md
+bat README.md
+ls
+l
+ls
+v README.md
+git status
+just test
+git add .
+git commit -m "Initial commit"
+git remote add origin https://github.com/farhnkrnapratma/xrals.git
+git push -u origin main
+cd ..
+ls
+clear
+ls
+rm -rf cosmic-ext-applet-weather/
+ls
+gh repo list
+l
+v .github/FUNDING.yml
