@@ -1,4 +1,4 @@
 (
     save_location: Documents,
-    choice: Rectangle,
+    choice: Output(Some("eDP-1")),
 )

@@ -6000,3 +6000,178 @@ ls
 gh repo list
 l
 v .github/FUNDING.yml
+dconfsync
+l
+clear
+cd Projects/
+mv data/ private_date
+cd private_date/
+git pull
+cd ..
+ls
+cd archcosmic/
+git pull
+cd ../dconfsync/
+git pull
+cd ../farhnkrnapratma/
+git pull
+cd ../xrals/
+git pull
+neofetch
+c
+fastfetch 
+cd farhnkrnapratma/
+z farhnkrnapratma/
+z Projects/farhnkrnapratma/
+git add .
+git commit -m "change screenshot"
+git push
+z Projects/
+l
+v xrals.toml
+c
+l
+v xrals.toml
+paru -S aura
+aura -Ayu
+aura -Syu
+aura -Q --help
+aura -Qem
+aura -Qe
+c
+ls
+touch xrals_config.nu
+ls
+v xrals_config.nu
+mv xrals_config.nu xrals/
+ls
+cd xrals/
+ls
+bat Projects/xrals.toml
+groups farhn
+v xrals_config.nu
+nu xrals_config.nu
+v xrals_config.nu
+nu xrals_config.nu
+v xrals_config.nu
+nu xrals_config.nu
+v xrals_config.nu
+nu xrals_config.nu
+aura -Qm
+aura -As google-chrome
+aura -Qem
+aura -Q --help
+aura -Qq
+aura -Qqe
+aura -Qqem
+aura -Qem
+aura -Qe
+aura -Qem
+v xrals_config.nu
+nu xrals_config.nu
+v xrals_config.nu
+nu xrals_config.nu
+v xrals_config.nu
+ls ~/.config/nvim/lua/base/
+v ~/.config/nvim/lua/base/1-options.lua
+c
+l
+v xrals_config.nu
+nu xrals_config.nu
+:q
+l
+cd bin
+l
+z Projects/
+v xrals_config.nu
+cd xrals/
+v xrals_config.nu
+l
+cd bin/
+l
+bash
+bat *
+git add .
+git commit -m "Fixed licensing error"
+git push
+c
+ls
+cd ..
+ls
+pacman -Qe | lines | each { |pkg| { name: $pkg, hash: ($pkg | sha512 | str substring 0..12) } }
+pacman -Qe | lines | each { |pkg| { name: $pkg, hash: ($pkg | sha512sum | str substring 0..12) } }
+pacman -Qe | lines | each { |pkg| { hash: ($pkg | sha512sum | str substring 0..12), name: $pkg } }
+pacman -Qe | lines | each { |pkg| { hash: ($pkg | sha512sum | str substring 0..12), name: $pkg } } | tee { each { save packagelist.txt } }
+pacman -Qe <\n>| lines <\n>| each { |pkg| $"($pkg | sha512sum | str substring 0..12) - ($pkg)" } <\n>| save --raw packagelist.txt
+ls
+bat packagelist.txt
+c
+rm -rf packagelist.txt
+v package.nu
+nu package.nu
+v package.nu
+nu package.nu
+ls
+bat package_list.nuon
+rm -rf package.nu
+v package.nu
+nu package.nu
+v package.nu
+bat package.nu
+v package.nu
+nu package.nu
+v package.nu
+nu package.nu
+v package.nu
+nu package.nu
+bat packagelist.txt
+pacman -Qe <\n>| lines <\n>| each { <\n>    |pkg| <\n>    let split = ($pkg | split row ' ')<\n>    let name = $split.0<\n>    let version = $split.1<\n>    {<\n>      hash: ($name | sha512 | str substring 0..12)<\n>      name: $name<\n>      version: $version<\n>    }<\n>}<\n>
+pacman -Qe <\n>| lines <\n>| each { <\n>    |pkg| <\n>    let split = ($pkg | split row ' ')<\n>    let name = $split.0<\n>    let version = $split.1<\n>    {<\n>      hash: ($name | sha512sum | str substring 0..12)<\n>      name: $name<\n>      version: $version<\n>    }<\n>}<\n>
+ls
+rm -rf package_list.nuon packagelist.txt
+v package.nu
+nu package.nu
+la
+ls
+bat package_list.nuon
+let pkgs = (open package_list.nuon)<\n>
+let pkgs = (open package_list.nuon); $pkgs.2
+let pkgs = (open package_list.nuon); $pkgs | get hash
+let pkgs = (open package_list.nuon); $pkgs | where name = "firefox"
+let pkgs = (open package_list.nuon); $pkgs | where name == "firefox"
+let pkgs = (open package_list.nuon); $pkgs | where name == "neovim"
+let pkgs = (open package_list.nuon); $pkgs | where hash == "58809642cfa80"
+let pkgs = (open package_list.nuon); $pkgs
+z Projects/xrals/
+let pkgs = (open package_list.nuon); $pkgs | select hash name
+let pkgs = (open package_list.nuon); $pkgs | select hash name | where name == "neovim"
+z Projects/
+l
+rm -rf xrals.toml
+ls
+cd farhnkrnapratma/
+git pull
+cd ../archcosmic/
+git pull
+cd ../dconfsync/
+git pull
+cd ../dotisotorrent/
+git pull
+git pull --ff-only
+git rebase
+git pull --ff-only
+ls
+git status
+git push
+c
+l
+c
+cd ..
+ls
+clear
+ls
+cd xrals/
+git pull
+c
+l
+nu xrals_config.nu
