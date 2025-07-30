@@ -6175,3 +6175,235 @@ git pull
 c
 l
 nu xrals_config.nu
+dconfsync
+s
+c
+z xrals
+;
+c
+l
+v xrals_config.nu
+v ~/.config/nvim/lua/base/1-options.lua
+v
+man(1) mkpasswd
+man 1 mkpasswd
+c
+l
+mv xrals_config.nu blueprint.nu
+l
+mv blueprint.nu system.nu
+l
+nu system.nu
+c
+sudo pacman -S cava
+fastfetch 
+z xrals
+l
+z x
+su
+clear
+v
+git shortlog -sne
+git shortlog -sne | save .mailmap
+ls
+c
+l
+bat .mailmap
+v .mailmap
+pacman -Ss zen
+pacman -Ss zen | grep linux
+pacman -Ss linux | grep linux
+pacman -Ss linux | grep "linux "
+pacman -Ss linux | grep linux-headers
+pacman -Ss linux-cachyos | grep linux-headers
+pacman -Ss linux-cachyos
+v system.nu
+paru -Ss linux-cachyos
+cat /proc/cmdline
+cd /boot
+ls
+cd loader/
+ls
+cd ..
+cd EFI/
+ls
+cd limine/
+ls
+c
+l
+mv package_list.nuon package.nu system.nu ../
+l
+git status
+git add .
+v justfile
+git add .
+git commit -m "bin: add more details about all xrals commands"
+git push
+l
+cd ..
+l
+v system.nu
+cd xrals/
+l
+mkdir src
+mkdir man
+l
+mv bin/ src/
+l
+cd src/
+ls
+mkdir utils
+cd utils/
+touch logger.nu
+l
+cd ..
+ls
+rm -rf utils/
+l
+touch justfile
+mv bin/* .
+l
+rm -rf bin/
+l
+mkdir xrals-{cache, config, diff, init, log, package, rebuild, rollback, search, state, sync}
+l
+ls
+rm -rf `xrals-{cache, config, diff, init, log, package, rebuild, rollback, search, state, sync}/`
+bash
+ls
+rm -rf config,/ diff,/ init,/ log,/ package,/ rebuild,/ rollback,/ search,/ state,/ `sync}/` `xrals-{cache,/`
+l
+bash
+rm -rf config,/ diff,/ init,/ log,/ package,/ rebuild,/ rollback,/ search,/ state,/ `sync}/` `xrals-{cache,/`
+ls
+rm -rf config/ diff/ init/ log/ package/ rebuild/ rollback/ search/ state/ `xrals-{cache/`
+l
+ls
+bash
+ls
+rm -rf project-*
+ls
+mkdir xrals
+mv xrals.nu xrals/
+l
+ls *.nu | each {<\n>  let base = ($in.name | str replace ".nu" "")<\n>  mkdir $base<\n>  mv $in.name ($base + "/" + $in.name)<\n>}
+ls
+cd xrals-sync/
+ls
+bat xrals-sync.nu
+ls
+cd ..
+ls
+cd src/
+ls
+cd ..
+ls
+cd man
+ls
+touch xrals.1
+ls
+rm -rf xrals.1
+l
+xrals
+echo xrals
+echo xrals | each { echo $"$it"}
+let x = xrals | $x
+let x = xrals
+let x = "xrals"
+let x = "xrals" | $x
+let x = "xrals" | echo $x
+let x = "xrals" | print $x
+let x = "xrals" | [$x $"$x + xx"]
+let x = "xrals" | [$x $"$x + xx"] | each { print }
+let x = "xrals" | [$x] | each { print }
+ls
+c
+ls ../src/
+[cache config diff init log package rebuild rollback search state sync] | each { touch $"xrals-($in)" }
+ls
+rm -rf *
+ls
+[cache config diff init log package rebuild rollback search state sync] | each { touch $"xrals-($in).1" }
+touch xrals.1
+ls
+clear
+ls
+cd ..
+ls
+v
+ls
+git status
+cd src/
+ls
+git clone https://github.com/cosmic-utils/cosmic-ext-applet-ollama.git<\n>cd cosmic-ext-applet-ollama
+just build-release
+curl -fsSL https://ollama.com/install.sh | sh
+sudo just install
+cd ..
+ls
+rm -rf cosmic-ext-applet-ollama/
+paru -Ss ollama
+paru -Ss ollama | grep /ollama
+paru -Ss ollama-chat-desktop-git ollama-for-amd-git
+paru -S ollama-chat-desktop-git ollama-for-amd-git
+paru -S --help
+paru -Sydd --disable-download-timeout ollama-chat-desktop-git ollama-for-amd-git
+paru -Sy --disable-download-timeout ollama-chat-desktop-git ollama-for-amd-git
+paru -Syu --disable-download-timeout ollama-chat-desktop-git ollama-for-amd-git
+paru -Syu --disable-download-timeout --noconfirm ollama-chat-desktop-git ollama-for-amd-git
+bash
+exit
+paru -Syu --disable-download-timeout ollama-chat-desktop-git ollama-for-amd-git
+paru -Scc
+sudo rm -rf /var/cache/pacman/pkg/download-nLdTWA
+paru -Rns (paru -Qdtq)
+node
+node --version
+sudo pacman -Rns node
+sudo pacman -Rns nodejs
+sudo pacman -Rns nodejs-lts-iron
+sudo pacman -Rns nodejs-lts
+sudo pacman -Rnsdd nodejs-lts
+sudo pacman -Rnsdd nodejs-lts-iron
+paru -S nodejs
+[(paru -Qdtq)] | each { paru -Rns $it }
+[(paru -Qdtq)] | each { paru -Rns $in }
+clear
+sudo pacman -Rns (pacman -Qdtq)
+ls
+l
+rm -rf .bash_history
+rm -rf .node_repl_history
+clear
+exit
+paru -Syu --disable-download-timeout ollama-for-amd-git
+paru -S --disable-download-timeout ollama-for-amd-git
+sudo pacman -S cmake
+paru -S --disable-download-timeout ollama-for-amd-git
+ollama
+ollama pull qwen3
+ollama pull
+ollama pull qwen3
+cd Projects/
+ls
+git clone https://github.com/cosmic-utils/cosmic-ext-applet-ollama.git
+cd cosmic-ext-applet-ollama/
+sudo just uninstall
+sudo pacman -Rns ollama
+paru -Rns ollama
+ollama
+which ollama
+exit
+paru -Ss cosmic-ext-clipboard-manager
+paru -Ss cosmic-clipboard-manager
+paru -Ss cosmic-utils-clipboard-manager
+paru -Ss cosmic | grep clipboard
+sudo pacman -S chaotic-aur clipboard-manager
+sudo pacman -S chaotic-aur/clipboard-manager
+paru -Ss cosmic | grep minimon
+sudo pacman -S cosmic-ext-applet-minimon-git
+paru -S cosmic-ext-applet-minimon-git
+bash
+exit
+bash
+ce
