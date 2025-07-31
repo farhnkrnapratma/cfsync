@@ -6861,3 +6861,15 @@ dconfsync
 cd dconfsync/
 ls
 rm -rf config.toml
+dconfsync 
+ls
+cd target/
+ls
+cd catppuccin/
+ls
+v ports.nu
+cd ..
+rm -rf catppuccin/ bonjourr/ cosmic-theme/
+cd ..
+ls
+v dconfsync

@@ -17,6 +17,8 @@ for $dst in $dsts {
 
 let push_timestamp = (date now | format date "%F %T %z")
 
+rm -rf ./target/nushell/history.txt
+
 print " :: GIT\n"
 
 git add .
