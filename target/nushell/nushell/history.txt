@@ -6407,3 +6407,161 @@ bash
 exit
 bash
 ce
+dconfsync
+s
+paru -S cosmic-ext-weather-applet-git
+cd Projects/
+git clone https://github.com/cosmic-utils/web-apps.git
+cd web-apps/
+sudo just install
+just recipe
+just --al
+just --help
+bat justfile
+just
+sudo just install
+z applications
+ls | grep github
+cd
+cd .local/share/applications/
+ls
+rm -rf dev.heppen.webapps.GitHub8076.desktop
+z xrals
+ls
+echo $"($env.HOME)/.config/"
+conts x = 10
+const x = 10
+const x = 10 | $x
+const x = 10 | print $x
+const x = 10; print $x
+z Projects/
+ls
+mkdir x
+cd x
+gh repo clone farhnkrnapratma
+cd farhnkrnapratma/
+ls
+rm -rf *
+l
+git log
+mv ../../farhnkrnapratma/* .
+mv ../../farhnkrnapratma/* . --force
+rm -rf .git
+mv ../../farhnkrnapratma/* .
+ls
+l
+cd .github/
+ls
+v FUNDING.yml
+mkdir workflows
+cd workflows/
+ls
+v pacman.yaml
+cd ..
+ls
+cd ..
+ls
+git remote
+git add .
+git status
+v README.md
+l
+git add .
+git commit -m "workflows: add pacman.yaml"
+git push
+git push --force
+git pull
+l
+cd ..
+ls
+cd ..
+rm -rf x
+ls
+ollama
+cd cosmic-ext-applet-ollama/
+sudo just uninstall
+cd ..
+ls
+rm -rf cosmic-ext-applet-ollama/ web-apps/
+mv private_date/ private_data
+ls
+cd archcosmic/
+git pull
+cd ..
+cd dconfsync/
+git pull
+BTOP
+fastfetch 
+c
+fast
+c
+fastfetch 
+neofetch
+c
+neofetch
+c
+neofetch
+v .config/nvim/
+cd .config/nvim/
+cd ..
+ls
+cd farhnkrnapratma/
+ls
+git status
+cd ..
+gh repo clone farhnkrnapratma
+mv farhnkrnapratma/ f
+gh repo clone farhnkrnapratma
+mv f/arch_cosmic.png farhnkrnapratma/
+rm -rf f
+cd fa
+cd farhnkrnapratma/
+ls
+git status
+git add .
+git commit -m "image: add new screenshot"
+git push
+cd ..
+ls
+cd archcosmic/
+git clone
+git pull
+cp ../farhnkrnapratma/arch_cosmic.png .
+v README.md
+git add .
+git commit -m "readme: improved documentation"
+git push
+l
+v install.sh
+./install.sh
+v install.sh
+./install.sh --arch
+clear
+l
+git add .
+rm -rf yay
+c
+git add .
+git status
+git commit -m "script: now if you use the `--arch` flag the chaotic-aur repo won't be enabled"
+git push
+git pull
+v install.sh
+cp install.sh ../
+git rebasew
+git rebase
+v install.sh
+bat README.md
+git push
+ls
+rm ../install.sh
+ls
+ls ../
+c
+l
+cd ..
+cd dconfsync/
+ls
+git pull
+dconfsync
+v dconfsync

@@ -1,9 +1,9 @@
 #!/bin/nu
 
 # The config folder
-const srcf = $"($env.HOME)/.config/"
+let srcf = $"($env.HOME)/.config/"
 # Add by yourself
-const dsts = ["starship.toml" "wezterm" "nvim" "nushell" "cosmic" "BetterDiscord"] 
+const dsts = ["starship.toml" "wezterm" "nvim" "nushell" "cosmic" "BetterDiscord"]
 
 print "\n :: RSYNC\n"
 
