@@ -6857,3 +6857,7 @@ git push
 git pull
 cd ..
 ls
+dconfsync 
+cd dconfsync/
+ls
+rm -rf config.toml
