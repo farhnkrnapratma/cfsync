@@ -6565,3 +6565,9 @@ ls
 git pull
 dconfsync
 v dconfsync
+dconfsync
+v dconfsync
+./dconfsync
+v dconfsync
+./dconfsync
+v dconfsync

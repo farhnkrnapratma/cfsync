@@ -7,10 +7,14 @@ const dsts = ["starship.toml" "wezterm" "nvim" "nushell" "cosmic" "BetterDiscord
 
 print "\n :: RSYNC\n"
 
+let esc = (0x1b | into string)
+let green = $esc + "[32m"
+let reset = $esc + "[0m"
+
 for $dst in $dsts {
   let fpath = ($srcf | path join $dst)
   let target = ("target/" | path join $dst)
-  printf " :: Syncing folder '%s' with '%s'...\n\n" $fpath $target
+  printf $" :: Syncing folder ($green)'%s'($reset) with ($green)'%s'($reset)...\n\n" $fpath $target
   rsync -aPvh --partial --delete $fpath $target
   print "\n :: Done.\n"
 }
