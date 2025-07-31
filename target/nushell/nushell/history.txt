@@ -6573,3 +6573,287 @@ v dconfsync
 v dconfsync
 ./dconfsync
 v dconfsync
+dconfsync
+l
+mkdir config.toml
+rm -rf config.toml/
+v config.toml
+l
+bash
+clear
+l
+clear
+l
+clear
+ls
+clear
+ls
+clear
+fastfetch 
+paru -Ss linux-cachyos
+paru -Ss cosmic
+v --version
+paru -Ss ttf-jetbrains
+rust --version
+rustup --version
+python --version
+go --version
+go -version
+go version
+ts
+sudo pacman -S typescript
+pacman -Ss typescript
+cd /
+ls
+cd dev
+ls
+cd ..
+ls
+cd etc
+bash
+c
+z Projects/archcosmic/
+ls
+mv install.sh install-v1.1.sh
+ls
+bash
+ls
+cd
+ls
+l
+cd .gnupg/
+ls
+bat common.conf
+bat crls.d/
+cd crls.d/
+ls
+bat DIR.txt
+cd -
+ls
+cd ..
+cp -r .gnupg/ Projects/private_data/recovery/
+cd Projects/private_data/
+ls
+cd recovery/
+l
+l ../../
+l ../../../
+c
+l
+cd 2fa-backup/
+;
+l
+cd CreativeButLazy/
+l
+cd ..
+cd farhnkrnapratma/
+ls
+c
+rm -rf Gaijin/
+cd OpenPGP/
+ls
+bat pgp::farhnkrnapratma@gmail.com.txt
+cd .gnupg/
+ls
+cd public-keys.d/
+l
+ls
+l
+c
+l
+c
+ls
+clear
+l
+bat `.#lk0x00007f0da0000ce0.Hanz.492318`
+cd
+cd .gnupg/
+ls
+cd public-keys.d/
+ls
+bat pubring.db
+cd ..
+bat trustdb.gpg
+v trustdb.gpg
+gpg --list-keys
+ls
+bat pgp::farhnkrnapratma@gmail.com.txt
+gpg --keyserver hkps://keys.openpgp.org --send-keys 0E8993B46423C2217F7E899BE9DE181A84887F4F
+gpg --keyserver https://keys.openpgp.org --send-keys 0E8993B46423C2217F7E899BE9DE181A84887F4F
+gpg --export farhnkrnapratma@gmail.com | curl -T - https://keys.openpgp.org
+c
+gpg --list-keys
+cd
+cd Projects/private_data/
+l
+cd recovery/
+ls
+l
+cd 2fa-backup/
+l
+cd farhnkrnapratma/
+l
+mv ../../.gnupg/ OpenPGP/
+ls
+cd OpenPGP/
+la
+ls
+v pgp::farhnkrnapratma@gmail.com.txt
+rm -rf pgp::farhnkrnapratma@gmail.com.txt
+l
+bat 0E8993B46423C2217F7E899BE9DE181A84887F4F.asc
+gpp edit-key 0E8993B46423C2217F7E899BE9DE181A84887F4F
+gpg edit-key 0E8993B46423C2217F7E899BE9DE181A84887F4F
+gpg --edit-key 0E8993B46423C2217F7E899BE9DE181A84887F4F
+gpg --export farhnkrnapratma@protonmail.com | curl -T - https://keys.openpgp.org
+gpg --list-keys
+ls
+l
+rm -rf *
+la
+ls
+l
+rm -rf .gnupg/
+ls
+l
+cd
+l
+cd -
+l
+clear
+ls
+cd ..
+ls
+cd ..
+ls
+git status
+git add ,
+git add .
+git commit -m "Add and remove credentials"
+git push
+cd ..
+ls
+cd archcosmic/
+ls
+clear
+ls
+git pull
+ls
+cd ../farhnkrnapratma/
+git pull
+cd ../archcosmic/
+l
+c
+cd ..
+ls
+mv package.nu package_list.nuon system.nu xrals/
+ls
+clear
+cd archcosmic/
+git status
+cd ..
+ls
+cd dconfsync/
+git pull
+cd ../dotisotorrent/
+git pull
+cd ../farhnkrnapratma/
+git pull
+ks
+ls
+bat README.md
+c
+cd ..
+ls
+cd private_data/
+ls
+cd ../xrals/
+git pull
+cd c
+c
+ls
+git pull
+c
+ls
+cd ..
+ls
+z private_data
+ls
+cd recovery/2fa-backup/
+ls
+mv CreativeButLazy/ creativebutlazy/
+cd farhnkrnapratma/
+ls
+cd ..
+cd 2fa-backup/
+ls
+cd ..
+cd keyring/
+ls
+cd proton/
+ls
+ls | sort-by modified
+ls | sort-by modified | reverse
+rm -rf `Proton Pass_export_2025-07-12_1752312077.csv` `Proton Pass_export_2025-07-24_1753335151.zip`
+ls
+cd -
+cd ..
+z private_data
+git status
+git add .
+git commit -m "Add and remove credentials"
+git push
+cd
+c
+z xrals
+ls
+rm -rf package_list.nuon
+ls
+clear
+ls
+z Projects/archcosmic/
+l
+git add .
+git commit -m "security: adding integrity and authenticity checks to the installation script with sha512sum and gpg"
+git push
+z archcosmic/
+cd Projects/archcosmic/
+l
+sha512sum -c install-v1.1.sh.sha512
+gpg --verify install-v1.1.sh.sig install-v1.1.sh
+c
+ls
+curl --proto '=https' --tlsv1.2 -sSf https://raw.githubusercontent.com/farhnkrnapratma/archcosmic/main/install-v1.1.sh | sh
+curl --proto '=https' --tlsv1.2 -sSf https://raw.githubusercontent.com/farhnkrnapratma/archcosmic/main/install-v1.1.sh | sh -s -- --arch
+l
+bat .archcosmic
+rm -rf .archcosmic
+l
+clear
+ls
+l
+rm -rf .bash_history
+l
+clear
+ls
+cd Projects/
+cd archcosmic/
+git pull
+l
+clear
+ls
+mv install-v1.1.sh install.sh
+mv install.sh.sig
+mv install-v1.1.sh.sig install.sh.sig
+mv install-v1.1.sh.sha512 install.sh.sha512
+ls
+v install.sh.sha512
+v install.sh.sig
+gpg --verify install.sh.sig install.sh
+sha512sum -c install.sh.sha512
+git add .
+git commit -m "security: adding integrity and authenticity checks to the installation script with sha512sum and gpg"
+git push
+git pull
+cd ..
+ls
