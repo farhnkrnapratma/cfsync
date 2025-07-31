@@ -1,7 +1,9 @@
 #!/bin/nu
 
-let srcf = $env.cfg
-let dsts = ["starship.toml" "wezterm" "nvim" "nushell" "cosmic" "BetterDiscord"] 
+# The config folder
+const srcf = $"($env.HOME)/.config/"
+# Add by yourself
+const dsts = ["starship.toml" "wezterm" "nvim" "nushell" "cosmic" "BetterDiscord"] 
 
 print "\n :: RSYNC\n"
 
@@ -12,8 +14,6 @@ for $dst in $dsts {
   rsync -aPvh --partial --delete $fpath $target
   print "\n :: Done.\n"
 }
-
-rm -rf "nushell/history.txt"
 
 let push_timestamp = (date now | format date "%F %T %z")
 
