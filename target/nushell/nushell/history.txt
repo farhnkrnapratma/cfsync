@@ -7146,3 +7146,38 @@ v 4-mappings.lua
 cd icons/
 ls
 v icons.lua
+cfsync
+cd
+cd Projects/cfsync/target/nvim/
+ls
+l
+rm -rf nvim/
+cd ..
+cd nushell/
+ls
+rm -rf nushell.lua
+ls
+rm -rf nushell
+ls
+cd ..
+cd BetterDiscord/
+ls
+rm -rf BetterDiscord/
+ls
+cd ..
+ls
+cd wezterm/
+ls
+rm -rf wezterm/
+ls
+cd .
+cd ..
+ls
+cd cosmic/
+ls
+rm -rf cosmic/
+ls
+cd
+z cfsync
+ls
+v cfsync
