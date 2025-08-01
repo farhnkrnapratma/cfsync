@@ -6931,3 +6931,13 @@ v system.nu
 fastfetch 
 s
 fastfetch 
+dconfsync 
+z xrals
+ls
+cd src/
+l
+cd xrals-init
+ls
+s
+bat /etc/resolv.conf
+sudo nvim /etc/resolv.conf

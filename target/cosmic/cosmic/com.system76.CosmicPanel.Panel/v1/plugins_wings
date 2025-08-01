@@ -1,6 +1,6 @@
 Some(([
     "com.system76.CosmicAppletWorkspaces",
-    "io.github.cosmic_utils.minimon-applet",
+    "dev.DBrox.CosmicSystemMonitor",
 ], [
     "com.system76.CosmicAppletStatusArea",
     "io.github.cosmic_utils.weather-applet",
