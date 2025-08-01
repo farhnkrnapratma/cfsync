@@ -7107,3 +7107,5 @@ z Projects/cfsync/
 ls
 v justfile
 cd
+cfsync
+c
