@@ -7109,3 +7109,40 @@ v justfile
 cd
 cfsync
 c
+cfsync
+v .config/wezterm/wezterm.lua
+z nvim
+v
+l
+v selene.toml
+paru -Ss selene
+paru -S selene
+c
+l
+selene
+clear
+l
+v .selene-schema.yml
+v .stylua.toml
+stylua
+paru -S stylue
+paru -S stylua
+stylua
+stylua .
+stylua --help
+v .stylua.toml
+v init.lua
+l
+v .styluaignore
+cd lua/
+ls
+cd base
+ls
+v 1-options.lua
+v 2-lazy.lua
+v 3-autocmds.lua
+z 4-mappings.lua
+v 4-mappings.lua
+cd icons/
+ls
+v icons.lua

@@ -1,8 +1,3 @@
--- HELLO, welcome to NormalNvim!
--- ----------------------------------------
--- Here you can define your nvim variables.
--- ----------------------------------------
-
 -- Options --------------------------------------------------------------------
 vim.opt.breakindent = true -- Wrap indent to match  line start.
 vim.opt.clipboard = "unnamedplus" -- Connection to the system clipboard.
@@ -53,13 +48,17 @@ vim.opt.scrolloff = 1000 -- Number of lines to leave before/after the cursor whe
 vim.opt.sidescrolloff = 8 -- Same but for side scrolling.
 vim.opt.selection = "old" -- Don't select the newline symbol when using <End> on visual mode.
 
-vim.opt.viewoptions:remove "curdir" -- Disable saving current directory with views.
-vim.opt.shortmess:append { s = true, I = true } -- Disable startup message.
-vim.opt.backspace:append { "nostop" } -- Don't stop backspace at insert.
-vim.opt.diffopt:append { "algorithm:histogram", "linematch:60" } -- Enable linematch diff algorithm
+vim.opt.viewoptions:remove("curdir") -- Disable saving current directory with views.
+vim.opt.shortmess:append({ s = true, I = true }) -- Disable startup message.
+vim.opt.backspace:append({ "nostop" }) -- Don't stop backspace at insert.
+vim.opt.diffopt:append({ "algorithm:histogram", "linematch:60" }) -- Enable linematch diff algorithm
 
-local is_android = vim.fn.isdirectory('/data') == 1
-if is_android then vim.opt.mouse = "v" else vim.opt.mouse = "a" end -- Enable scroll for android
+local is_android = vim.fn.isdirectory("/data") == 1
+if is_android then
+    vim.opt.mouse = "v"
+else
+    vim.opt.mouse = "a"
+end
 
 -- Globals --------------------------------------------------------------------
 vim.g.mapleader = " " -- Set leader key.
@@ -80,4 +79,3 @@ vim.g.lsp_signature_enabled = true -- Enable automatically showing lsp help as y
 vim.g.notifications_enabled = true -- Enable notifications.
 vim.g.semantic_tokens_enabled = true -- Enable lsp semantic tokens at start.
 vim.g.url_effect_enabled = true -- Highlight URLs with an underline effect.
-
