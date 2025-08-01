@@ -6873,3 +6873,61 @@ rm -rf catppuccin/ bonjourr/ cosmic-theme/
 cd ..
 ls
 v dconfsync
+dconfsync 
+c
+clear
+ls
+cd
+ls
+cd Projects/
+ls
+cd xrals/
+L
+CLEAR
+clear
+ls
+cd /bin
+ls
+clearls
+clear
+ls
+cd
+clear
+ls
+cd /
+ls
+cd
+clear
+ls
+clear
+z xrals
+cd
+lc
+clear
+ls
+z Projects/xrals/
+ls
+clear
+ls
+v package.nu
+ls
+clear
+ls
+clear
+ls
+clear
+ls
+clear
+lds
+clear
+ls
+v system.nu
+z Projects/xrals/
+v system.nu
+nu system.nu
+v system.nu
+nu system.nu
+v system.nu
+fastfetch 
+s
+fastfetch 
