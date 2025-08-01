@@ -105,23 +105,23 @@ def erika-wifi [action: string, ssid?: string] {
   }
 }
 
-def dconfsync [] {
+def cfsync [] {
   if (is-admin) {
     print "You are not supposed to run this."
     return
   } else {
-    cd ($env.HOME)/Projects/dconfsync/
+    cd ($env.HOME)/Projects/cfsync/
     just sync
     cd -
   }
 }
 
-def dconfcopy [] {
+def cfcopy [] {
   if (is-admin) {
     print "You are not supposed to run this."
     return
   } else {
-    cd ($env.HOME)/Projects/dconfsync/
+    cd ($env.HOME)/Projects/cfsync/
     just copy
     cd -
   }

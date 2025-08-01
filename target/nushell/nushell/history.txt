@@ -6941,3 +6941,169 @@ ls
 s
 bat /etc/resolv.conf
 sudo nvim /etc/resolv.conf
+dconfsync 
+c
+l
+cd -
+z xrals
+l
+mkdir test
+cd test/
+ls
+ls ../bi
+ls ../bin
+ls ../bin/
+ls ../src/
+[cache config diff init log package rebuild rollback search state sync] | each { touch $"xrals-($in).test.nu" }
+ls
+touch xrals.test.nu
+l
+clear
+ls
+clear
+cd ..
+ls
+cd src/
+ls
+cd ..
+cd test/
+ls
+cd ..
+cd src/
+ls
+rm -rf justfile
+ls
+cd ..
+ls
+mv package.nu system.nu ../
+ls
+l
+cd src/
+ls
+cd ..
+ls
+cd test/
+ls
+cd ..
+cd test/
+ls
+cd ..
+cd src
+ls
+[cache config diff init log package rebuild rollback search state sync] | each {mv $"xrals-($in)/*" ./ }
+[cache config diff init log package rebuild rollback search state sync] | each {mv $"xrals-($in)/xrals-($in).nu" ./ }
+ls
+mv xrals/xrals.nu .
+ls
+sort-by type dir | rm -rf $in
+ls | sort-by type dir
+ls | sort-by dir
+ls | sort-by type
+ls | sort-by type | each { type == "dir" } | rm -rf $in
+ls
+ls | each { type == "dir" } | rm -rf $in
+ls | where type == "dir" | get name | each {|it| rm -rf $it}
+ls
+cd ..
+ls
+cd man
+ls
+cd ..
+ls
+clear
+ls
+cd man
+ls
+[cache config diff init log package rebuild rollback search state sync] | each {mv $"xrals-($in).1" $"xrals-($in).man.nu" }
+ls
+mv xrals.1 xrals.man.nu
+ls
+cd ..
+ls
+cd src/
+ls
+bat xrals-sync.nu
+z xrals
+l
+z src
+ls
+clear
+l
+rm -rf xrals
+ls
+rm -rf xrals.nu
+ls
+z ../man
+ls
+rm -rf xrals.man.nu
+ls
+cd ..
+cd test/
+rm -rf xrals.test.nu
+ls
+cd ..
+ls
+c
+ls
+cd src
+ls
+clear
+ls
+cd
+cd Projects/
+curl --proto '=https' --tlsv1.2 -sSf https://archlinux.org/packages/extra/x86_64/age/download/
+ls
+curl --proto '=https' --tlsv1.2 -sSf https://archlinux.org/packages/extra/x86_64/age/download/ -o this
+ls
+rm -rf this
+ls
+curl --help
+curl --proto '=https' --tlsv1.2 -Sf https://archlinux.org/packages/extra/x86_64/age/download/ -o age.tar.xz
+ls
+rm -rf age.tar.xz
+ls
+z xrals
+cd src
+ls
+cd ..
+ls
+v code_convention.nu
+v code_convention.md
+v .editorconfig
+ls
+v code_convention.md
+git add code_convention.md
+git commit -m "project: add code style convention"
+git push
+git status
+git add .
+git commit -m "project: add blank files as template"
+git push
+help modules
+const x = 10 | $x
+const x = 10; print $x
+const x = 10; x = 20;
+const x = 10; const x = 20; print $x
+const x = 10; x = 20; print $x
+const x = 10; x += 20; print $x
+const x = 10; $x += 20; print $x
+cd
+pacman -Ss csync
+paru -Ss csync
+paru -Ss csync | grep /csync
+paru -Ss csync | grep /cfsync
+paru -Ss cfsync | grep /cfsync
+paru -Ss cfsync
+cn
+cd Projects/
+mv dconfsync/ cfsync/
+cd cfsync/
+l
+mv dconfcopy cfcopy
+mv dconfsync cfsync
+ls
+cfsync
+z Projects/cfsync/
+ls
+v justfile
+cd
