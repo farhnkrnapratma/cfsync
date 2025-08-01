@@ -1,37 +1,42 @@
-local lazypath = vim.env.LAZY or vim.fn.stdpath "data" .. "/lazy/lazy.nvim"
-
-if not (vim.env.LAZY or (vim.uv or vim.loop).fs_stat(lazypath)) then
-  -- stylua: ignore
-  local result = vim.fn.system({ "git", "clone", "--filter=blob:none", "https://github.com/folke/lazy.nvim.git", "--branch=stable", lazypath })
-  if vim.v.shell_error ~= 0 then
-    -- stylua: ignore
-    vim.api.nvim_echo({ { ("Error cloning lazy.nvim:\n%s\n"):format(result), "ErrorMsg" }, { "Press any key to exit...", "MoreMsg" } }, true, {})
-    vim.fn.getchar()
-    vim.cmd.quit()
-  end
+local function load_source(source)
+    local status_ok, error = pcall(require, source)
+    if not status_ok then
+        vim.api.nvim_echo(
+            { { "Failed to load " .. source .. "\n\n" .. error } },
+            true,
+            { err = true }
+        )
+    end
 end
 
-vim.opt.rtp:prepend(lazypath)
-
-if not pcall(require, "lazy") then
-  -- stylua: ignore
-  vim.api.nvim_echo({ { ("Unable to load lazy from: %s\n"):format(lazypath), "ErrorMsg" }, { "Press any key to exit...", "MoreMsg" } }, true, {})
-  vim.fn.getchar()
-  vim.cmd.quit()
+local function load_sources(source_files)
+    vim.loader.enable()
+    for _, source in ipairs(source_files) do
+        load_source(source)
+    end
 end
 
-vim.keymap.set("n", "<C-Tab>", function()
-  local buffers = vim.fn.getbufinfo({ buflisted = 1 })
-  if #buffers > 1 then
-    vim.cmd("bnext")
-  end
-end, { noremap = true, silent = true })
+local function load_sources_async(source_files)
+    for _, source in ipairs(source_files) do
+        vim.defer_fn(function() load_source(source) end, 50)
+    end
+end
 
-vim.keymap.set("n", "<C-S-Tab>", function()
-  local buffers = vim.fn.getbufinfo({ buflisted = 1 })
-  if #buffers > 1 then
-    vim.cmd("bprev")
-  end
-end, { noremap = true, silent = true })
+local function load_colorscheme(colorscheme)
+    if vim.g.default_colorscheme then
+        if not pcall(vim.cmd.colorscheme, colorscheme) then
+            require("base.utils").notify(
+                "Error setting up colorscheme: " .. colorscheme,
+                vim.log.levels.ERROR
+            )
+        end
+    end
+end
 
-require "lazy_setup"
+load_sources({
+    "base.1-options",
+    "base.2-lazy",
+    "base.3-autocmds",
+})
+load_colorscheme(vim.g.default_colorscheme)
+load_sources_async({ "base.4-mappings" })

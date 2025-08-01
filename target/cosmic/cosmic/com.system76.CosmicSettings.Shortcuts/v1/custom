@@ -3,7 +3,9 @@
         modifiers: [
             Super,
         ],
-    ): System(Launcher),
+        key: "p",
+        description: Some("Settings"),
+    ): Spawn("cosmic-settings"),
     (
         modifiers: [
             Super,
@@ -18,13 +20,6 @@
         ],
         key: "m",
     ): Minimize,
-    (
-        modifiers: [
-            Super,
-        ],
-        key: "p",
-        description: Some("Settings"),
-    ): Spawn("cosmic-settings"),
     (
         modifiers: [],
         key: "Print",

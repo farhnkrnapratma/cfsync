@@ -1,6 +1,6 @@
 (
     output: "all",
-    source: Path("/home/farhn/Pictures/Wallpapers/blue-eye-samurai-mizu-5120x2880-20683.png"),
+    source: Path("/home/farhn/Pictures/Wallpapers/cherry-blossom-trees-purple-flowers-pathway-park-floral-6000x4000-3300.jpg"),
     filter_by_theme: true,
     rotation_frequency: 300,
     filter_method: Lanczos,
