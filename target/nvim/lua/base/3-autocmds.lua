@@ -36,15 +36,12 @@ autocmd({ "BufReadPost", "BufNewFile", "BufWritePost" }, {
         local empty_buffer = vim.fn.resolve(vim.fn.expand("%")) == ""
         local greeter = vim.api.nvim_get_option_value("filetype", { buf = args.buf }) == "alpha"
         local git_repo = vim.fn.executable("git") == 1
-            and utils.run_cmd(
-                {
-                    "git",
-                    "-C",
-                    vim.fn.fnamemodify(vim.fn.resolve(vim.fn.expand("%")), ":p:h"),
-                    "rev-parse",
-                },
-                false
-            )
+            and utils.run_cmd({
+                "git",
+                "-C",
+                vim.fn.fnamemodify(vim.fn.resolve(vim.fn.expand("%")), ":p:h"),
+                "rev-parse",
+            }, false)
 
         -- For any file exept empty buffer, or the greeter (alpha)
         if not (empty_buffer or greeter) then
@@ -208,7 +205,9 @@ autocmd("VimEnter", {
         -- Add to menu
         vim.api.nvim_command([[menu PopUp.Format\ \Code <cmd>silent! Format<CR>]])
         vim.api.nvim_command([[menu PopUp.-1- <Nop>]])
-        vim.api.nvim_command([[menu PopUp.Toggle\ \Breakpoint <cmd>:lua require('dap').toggle_breakpoint()<CR>]])
+        vim.api.nvim_command(
+            [[menu PopUp.Toggle\ \Breakpoint <cmd>:lua require('dap').toggle_breakpoint()<CR>]]
+        )
         vim.api.nvim_command([[menu PopUp.Debugger\ \Continue <cmd>:DapContinue<CR>]])
         vim.api.nvim_command([[menu PopUp.Run\ \Test <cmd>:Neotest run<CR>]])
     end,

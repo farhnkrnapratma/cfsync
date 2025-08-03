@@ -1,1 +1,14 @@
-[]
+[
+    (
+        name: "Craps",
+        icon: "folder-symbolic",
+        filter: AppIds([
+            "io.github.cosmic_utils.minimon-applet",
+            "cups",
+            "bssh",
+            "bvnc",
+            "avahi-discover",
+            "cmake-gui",
+        ]),
+    ),
+]
