@@ -1,6 +1,6 @@
 (
     output: "all",
-    source: Path("/home/farhn/Pictures/Wallpapers/A_Herefordshire_Lane.png"),
+    source: Path("/home/farhn/Pictures/Wallpapers/aesthetic-feathers-5120x3413-17061.jpg"),
     filter_by_theme: true,
     rotation_frequency: 300,
     filter_method: Lanczos,
