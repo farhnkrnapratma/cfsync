@@ -2,13 +2,32 @@
     (
         name: "Craps",
         icon: "folder-symbolic",
-        filter: AppIds([
-            "io.github.cosmic_utils.minimon-applet",
-            "cups",
-            "bssh",
-            "bvnc",
-            "avahi-discover",
-            "cmake-gui",
-        ]),
+        filter: Categories(
+            categories: [
+                "System",
+            ],
+            exclude: [
+                "com.system76.CosmicStore",
+                "com.system76.CosmicTerm",
+                "com.system76.CosmicScreenshot",
+                "org.wezfurlong.wezterm",
+                "org.fedoraproject.MediaWriter",
+            ],
+            include: [
+                "gnome-language-selector",
+                "im-config",
+                "org.freedesktop.IBus.Setup",
+                "system76-driver",
+                "bvnc",
+                "bssh",
+                "qdbusviewer",
+                "assistant",
+                "linguist",
+                "qv4l2",
+                "designer",
+                "qvidcap",
+                "nvim",
+            ],
+        ),
     ),
 ]
