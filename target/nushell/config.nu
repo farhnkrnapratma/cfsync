@@ -167,7 +167,6 @@ alias ce = config env
 alias crun = cargo run
 alias cbuild = cargo build
 alias ctest = cargo test
-alias push = git push; git push --all gitlab
 
 mkdir ($nu.data-dir | path join "vendor/autoload")
 starship init nu | save -f ($nu.data-dir | path join "vendor/autoload/starship.nu")
