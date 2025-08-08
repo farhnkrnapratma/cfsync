@@ -1,6 +1,6 @@
 def erika-install [source: string, ...packages: string] {
   match $source {
-    "a" => { paru -S --disable-download-timeout ...$packages },
+    "a" => { yay -S --disable-download-timeout ...$packages },
     "s" => { sudo snap install ...$packages },
     "f" => { flatpak install ...$packages },
     _ => {
@@ -15,7 +15,7 @@ def erika-install [source: string, ...packages: string] {
 
 def erika-query [source: string, package: string] {
   match $source {
-    "a" => { paru -Ss $package },
+    "a" => { yay -Ss $package },
     "s" => { snap search $package },
     "f" => { flatpak search $package },
     _ => {
@@ -30,7 +30,7 @@ def erika-query [source: string, package: string] {
 
 def erika-remove [source: string, ...packages: string] {
   match $source {
-    "a" => { paru -Rnsdd ...$packages },
+    "a" => { yay -Rnsdd ...$packages },
     "s" => { sudo snap remove ...$packages },
     "f" => { flatpak uninstall ...$packages },
     _ => {
@@ -45,11 +45,11 @@ def erika-remove [source: string, ...packages: string] {
 
 def erika-sync [source?: string] {
   match $source {
-    "a" => { paru -Syu --disable-download-timeout --noconfirm },
+    "a" => { yay -Syu --disable-download-timeout --noconfirm },
     "s" => { sudo snap refresh },
     "f" => { flatpak update },
     null => {
-      paru -Syu --noconfirm
+      yay -Syu --noconfirm
       sudo snap refresh
       flatpak update
     },
@@ -127,6 +127,26 @@ def cfcopy [] {
   }
 }
 
+def push [] {
+  git push; git push --all gitlab
+}
+
+def commit [message: string, push?: string] {
+  match $push {
+    "push" => {
+      git add .
+      git commit -m $message
+      push
+    },
+    _ => {
+      git add .
+      git commit -m $message
+    }
+  }
+}
+
+# Aliases
+
 alias a = erika-serv
 alias c = clear
 alias d = rm -rf
@@ -141,6 +161,13 @@ alias w = erika-wifi
 alias x = exit
 alias cn = config nu
 alias ce = config env
+
+# Other Aliases
+
+alias crun = cargo run
+alias cbuild = cargo build
+alias ctest = cargo test
+alias push = git push; git push --all gitlab
 
 mkdir ($nu.data-dir | path join "vendor/autoload")
 starship init nu | save -f ($nu.data-dir | path join "vendor/autoload/starship.nu")

@@ -12,6 +12,7 @@
                 "com.system76.CosmicScreenshot",
                 "org.wezfurlong.wezterm",
                 "org.fedoraproject.MediaWriter",
+                "snap-store_snap-store",
             ],
             include: [
                 "gnome-language-selector",
@@ -27,6 +28,7 @@
                 "designer",
                 "qvidcap",
                 "nvim",
+                "cmake-gui",
             ],
         ),
     ),
