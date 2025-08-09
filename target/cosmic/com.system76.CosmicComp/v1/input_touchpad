@@ -7,7 +7,7 @@
     click_method: Some(ButtonAreas),
     scroll_config: Some((
         method: None,
-        natural_scroll: Some(true),
+        natural_scroll: Some(false),
         scroll_button: None,
         scroll_factor: Some(2.0),
     )),

@@ -5,4 +5,5 @@
     Music,
     Pictures,
     Videos,
+    Path("/home/farhn/Projects"),
 ]
