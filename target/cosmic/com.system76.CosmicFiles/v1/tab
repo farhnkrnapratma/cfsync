@@ -4,7 +4,7 @@
     show_hidden: false,
     icon_sizes: (
         list: 100,
-        grid: 350,
+        grid: 275,
     ),
     single_click: false,
 )
