@@ -90,7 +90,7 @@ def erika-wifi [action: string, ssid?: string] {
         printf ":: Error  : Required [ssid] can not be empty while [action]: [c]onnect"
         return
       } else {
-        nmcli device wifi connect $ssid
+        nmcli device wifi connect $ssid --ask
       }
     },
     "l" => { nmcli device wifi list },
