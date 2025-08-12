@@ -3,7 +3,7 @@
 # The config folder
 let srcf = $"($env.HOME)/.config/"
 # Add by yourself
-const dsts = ["starship.toml" "wezterm" "nvim" "nushell" "cosmic" "BetterDiscord"]
+const dsts = ["starship.toml" "wezterm" "nvim" "nushell" "cosmic"]
 
 print "\n :: RSYNC\n"
 

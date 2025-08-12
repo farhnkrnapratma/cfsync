@@ -1,7 +1,5 @@
 #!/bin/nu
 
-sudo pacman -S nushell justfile starship zoxide discord wezterm ttf-jetbrains-mono-nerd
-
 let config = $"($env.HOME)/.config/"
 
 cp -r target/* $config

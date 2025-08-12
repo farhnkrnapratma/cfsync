@@ -4,7 +4,7 @@ return {
 	default_prog = { "/usr/bin/nu" },
 	scrollback_lines = 50000,
 	enable_scroll_bar = false,
-	font = wz.font("JetBrainsMono Nerd Font"),
+    --font = wz.font("JetBrainsMono Nerd Font"),
 	font_size = 11,
 	color_scheme = "Gruvbox Material (Gogh)",
 	inactive_pane_hsb = {
