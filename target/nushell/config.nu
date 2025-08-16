@@ -1,7 +1,7 @@
 def erika-install [source: string, ...packages: string] {
   match $source {
     "a" => { yay -S --disable-download-timeout ...$packages },
-    "s" => { sudo snap install ...$packages },
+    "s" => { doas snap install ...$packages },
     "f" => { flatpak install ...$packages },
     _ => {
       printf ":: Error  : Unknown [source]: '%s'\n" $source
@@ -31,7 +31,7 @@ def erika-query [source: string, package: string] {
 def erika-remove [source: string, ...packages: string] {
   match $source {
     "a" => { yay -Rnsdd ...$packages },
-    "s" => { sudo snap remove ...$packages },
+    "s" => { doas snap remove ...$packages },
     "f" => { flatpak uninstall ...$packages },
     _ => {
       printf ":: Error  : Unknown [source]: '%s'\n" $source
@@ -46,11 +46,11 @@ def erika-remove [source: string, ...packages: string] {
 def erika-sync [source?: string] {
   match $source {
     "a" => { yay -Syu --disable-download-timeout --noconfirm },
-    "s" => { sudo snap refresh },
+    "s" => { doas snap refresh },
     "f" => { flatpak update },
     null => {
       yay -Syu --noconfirm
-      sudo snap refresh
+      doas snap refresh
       flatpak update
     },
     _ => {
@@ -65,7 +65,7 @@ def erika-sync [source?: string] {
 
 def erika-serv [action: string, service: string] {
   def serv [action: string] {
-    sudo systemctl $action $service
+    doas systemctl $action $service
   }
   match $action {
     "s" => { serv "status" },
@@ -152,6 +152,7 @@ alias c = clear
 alias d = rm -rf
 alias grep = grep --color=auto
 alias i = erika-install
+alias ip = ip -c -p -h
 alias l = ls -la
 alias q = erika-query
 alias r = erika-remove
