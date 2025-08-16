@@ -1,6 +1,6 @@
 (
     output: "all",
-    source: Path("/home/farhn/Pictures/kali-trail.png"),
+    source: Path("/home/farhn/Pictures/konoha.png"),
     filter_by_theme: true,
     rotation_frequency: 300,
     filter_method: Lanczos,
